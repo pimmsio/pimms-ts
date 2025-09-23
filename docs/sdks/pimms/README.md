@@ -2,6 +2,6 @@
 
 ## Overview
 
-PIMMS API: PIMMS | Grow with deeplinks
+PIMMS API: PIMMS | Turn more clicks into sales
 
 ### Available Operations

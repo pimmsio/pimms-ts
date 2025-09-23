@@ -13,6 +13,16 @@ let value: Partner = {
     tagIds: [
       "clux0rgak00011...",
     ],
+    testVariants: [
+      {
+        url: "https://example.com/variant-1",
+        percentage: 50,
+      },
+      {
+        url: "https://example.com/variant-2",
+        percentage: 50,
+      },
+    ],
   },
 };
 ```

@@ -1,36 +1,38 @@
 lockVersion: 2.0.0
 id: 68d0a527-4644-4531-8364-947c54d97e44
 management:
-  docChecksum: 1b82071fa06081a806cba77d15db7dd2
+  docChecksum: c1aa2088de6bcbf4ca77eb4341b00b0a
   docVersion: 0.0.1
-  speakeasyVersion: 1.529.1
-  generationVersion: 2.566.5
-  releaseVersion: 0.4.0
-  configChecksum: 3597f667d7c8c54893f2f78fe302f0f8
+  speakeasyVersion: 1.622.1
+  generationVersion: 2.709.0
+  releaseVersion: 0.5.0
+  configChecksum: 1569cfb10ef60000bb9a4fa075284e87
+  repoURL: https://github.com/pimmsio/pimms-ts.git
+  installationURL: https://github.com/pimmsio/pimms-ts
   published: true
 features:
   typescript:
     additionalDependencies: 0.1.0
-    constsAndDefaults: 0.1.11
-    core: 3.21.5
+    constsAndDefaults: 0.1.12
+    core: 3.21.23
     defaultEnabledRetries: 0.1.0
     deprecations: 2.81.1
-    devContainers: 2.90.0
+    devContainers: 2.90.1
     enumUnions: 0.1.0
     envVarSecurityUsage: 0.1.2
-    errors: 2.84.0
-    examples: 2.81.5
-    globalSecurity: 2.82.13
+    errors: 2.86.1
+    examples: 2.82.3
+    globalSecurity: 2.82.14
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
-    globalServerURLs: 2.82.4
-    mcpServer: 0.9.0
+    globalServerURLs: 2.82.5
+    mcpServer: 0.9.3
     nameOverrides: 2.81.2
     nullables: 0.1.1
     responseFormat: 0.2.3
     retries: 2.83.0
-    sdkHooks: 0.2.0
-    unions: 2.85.8
+    sdkHooks: 0.3.0
+    unions: 2.85.11
 generatedFiles:
   - .devcontainer/README.md
   - .devcontainer/devcontainer.json
@@ -111,14 +113,15 @@ generatedFiles:
   - docs/models/operations/level.md
   - docs/models/operations/linkprops.md
   - docs/models/operations/partner.md
-  - docs/models/operations/paymentprocessor.md
   - docs/models/operations/queryparamtagids.md
+  - docs/models/operations/referer.md
   - docs/models/operations/retrieveanalyticsrequest.md
   - docs/models/operations/retrieveanalyticsresponsebody.md
   - docs/models/operations/sale.md
   - docs/models/operations/tag.md
   - docs/models/operations/tagids.md
   - docs/models/operations/tagnames.md
+  - docs/models/operations/testvariants.md
   - docs/models/operations/trackleadrequestbody.md
   - docs/models/operations/trackleadresponsebody.md
   - docs/models/operations/tracksalecustomer.md
@@ -138,6 +141,10 @@ generatedFiles:
   - docs/sdks/qrcodes/README.md
   - docs/sdks/track/README.md
   - eslint.config.mjs
+  - examples/.env.template
+  - examples/README.md
+  - examples/linksCreate.example.ts
+  - examples/package.json
   - jsr.json
   - package.json
   - src/core.ts
@@ -215,7 +222,9 @@ generatedFiles:
   - src/models/errors/internalservererror.ts
   - src/models/errors/inviteexpired.ts
   - src/models/errors/notfound.ts
+  - src/models/errors/pimmserror.ts
   - src/models/errors/ratelimitexceeded.ts
+  - src/models/errors/responsevalidationerror.ts
   - src/models/errors/sdkvalidationerror.ts
   - src/models/errors/unauthorized.ts
   - src/models/errors/unprocessableentity.ts
@@ -251,7 +260,7 @@ examples:
         application/json: {"url": "https://pimms.io", "externalId": "123456", "tagIds": ["clux0rgak00011..."]}
       responses:
         "200":
-          application/json: {"id": "<id>", "domain": "low-packaging.info", "key": "<key>", "url": "https://black-and-white-secrecy.org/", "trackConversion": false, "archived": false, "expiresAt": "1743808457787", "title": "<value>", "description": "fumigate convection though zowie", "image": "https://loremflickr.com/1809/1985?lock=7046932022822980", "video": "https://picsum.videos/seed/LdrqA5uuk/550/2814", "ios": "<value>", "android": "<id>", "tags": [{"id": "<id>", "name": "<value>", "color": "red"}, {"id": "<id>", "name": "<value>", "color": "red"}, {"id": "<id>", "name": "<value>", "color": "green"}], "webhookIds": ["<value>", "<value>"], "comments": "yuck forager beneath please shadowy foodstuffs welcome via deeply writ amid pupil yawningly", "shortLink": "https://charming-request.com/", "qrCode": "https://old-fashioned-wasabi.biz/", "utm_source": "<value>", "utm_medium": "<value>", "utm_campaign": "<value>", "utm_term": "<value>", "utm_content": "<value>", "userId": "<id>", "workspaceId": "<id>", "clicks": 0, "lastClicked": "<value>", "leads": 0, "createdAt": "1731724032379", "updatedAt": "1743803788355"}
+          application/json: {"id": "<id>", "domain": "graceful-moment.info", "key": "<key>", "url": "https://polite-daddy.name/", "trackConversion": false, "archived": false, "expiresAt": "1740654751181", "title": "<value>", "description": "clamp light case", "image": "https://loremflickr.com/2796/1386?lock=7843684715936009", "video": "https://loremflickr.com/2488/1524?lock=4074143183622526", "ios": null, "android": "<id>", "tags": [], "webhookIds": ["<value 1>", "<value 2>"], "comments": "handy larva past fixed however underneath which rundown er lest underneath", "shortLink": "https://forceful-bell.biz", "qrCode": "https://victorious-humidity.com", "utm_source": "<value>", "utm_medium": "<value>", "utm_campaign": "<value>", "utm_term": "<value>", "utm_content": "<value>", "userId": null, "workspaceId": "<id>", "clicks": 0, "lastClicked": "<value>", "leads": 0, "createdAt": "1705717268004", "updatedAt": "1735649494286"}
         "400":
           application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
         "401":
@@ -276,7 +285,7 @@ examples:
         application/json: {"url": "https://pimms.io", "externalId": "123456", "tagIds": ["clux0rgak00011..."]}
       responses:
         "200":
-          application/json: {"id": "<id>", "domain": "neat-instruction.info", "key": "<key>", "url": "https://entire-rubric.com/", "trackConversion": false, "archived": false, "expiresAt": "1748439250288", "title": "<value>", "description": "father um daily", "image": "https://picsum.photos/seed/r6xe3C2p/3986/3106", "video": "https://picsum.videos/seed/1dnlg/3945/872", "ios": "<value>", "android": "<id>", "tags": [{"id": "<id>", "name": "<value>", "color": "purple"}, {"id": "<id>", "name": "<value>", "color": "pink"}, {"id": "<id>", "name": "<value>", "color": "purple"}], "webhookIds": [], "comments": "incidentally heroine and cleaner sentimental fail happily yum per homeschool positively pfft pomelo etch as with descent", "shortLink": "https://obvious-label.biz/", "qrCode": "https://blue-barge.name/", "utm_source": "<value>", "utm_medium": "<value>", "utm_campaign": "<value>", "utm_term": "<value>", "utm_content": "<value>", "userId": "<id>", "workspaceId": "<id>", "clicks": 0, "lastClicked": "<value>", "leads": 0, "createdAt": "1731984128291", "updatedAt": "1743794899507"}
+          application/json: {"id": "<id>", "domain": "rural-behest.net", "key": "<key>", "url": "https://odd-brush.net", "trackConversion": false, "archived": false, "expiresAt": "1745789614345", "title": "<value>", "description": "queasily circa hunger ew both censor draft ack bob large", "image": "https://loremflickr.com/426/2724?lock=8228538483422329", "video": "https://picsum.videos/seed/IoF8Ht/1263/2672", "ios": "<value>", "android": "<id>", "tags": [], "webhookIds": ["<value 1>"], "comments": "fooey disconnection intent sediment ha compassionate vice extremely blind overcooked cross", "shortLink": "https://necessary-hose.net/", "qrCode": "https://warmhearted-deployment.org", "utm_source": "<value>", "utm_medium": "<value>", "utm_campaign": "<value>", "utm_term": "<value>", "utm_content": "<value>", "userId": "<id>", "workspaceId": "<id>", "clicks": 0, "lastClicked": "<value>", "leads": 0, "createdAt": "1710248288929", "updatedAt": "1735678066410"}
         "400":
           application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
         "401":
@@ -306,11 +315,10 @@ examples:
           device: "Desktop"
           browser: "Chrome"
           os: "Windows"
-          referer: "google.com"
           refererUrl: "https://pimms.io/blog"
       responses:
         "200":
-          application/json: [{"country": "GE", "region": "*", "city": "North Kailee", "clicks": 0, "leads": 0, "sales": 0, "saleAmount": 0}, {"country": "PH", "region": "*", "city": "Port Anabelfort", "clicks": 0, "leads": 0, "sales": 0, "saleAmount": 0}, {"country": "VN", "region": "*", "city": "East Anissafurt", "clicks": 0, "leads": 0, "sales": 0, "saleAmount": 0}]
+          application/json: []
         "400":
           application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
         "401":
@@ -335,7 +343,7 @@ examples:
         application/json: {"clickId": "<id>", "eventName": "Sign up", "externalId": "", "customerName": null, "customerEmail": null, "customerAvatar": null}
       responses:
         "200":
-          application/json: {"click": {"id": "<id>"}, "customer": {"name": "<value>", "email": "Diego86@hotmail.com", "avatar": "https://picsum.photos/seed/fWwyl/1479/748", "externalId": "<id>"}}
+          application/json: {"click": {"id": "<id>"}, "customer": {"name": "<value>", "email": "Emilie.Schaefer58@gmail.com", "avatar": "https://loremflickr.com/1842/262?lock=389315303878245", "externalId": "<id>"}}
         "400":
           application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
         "401":
@@ -357,10 +365,10 @@ examples:
   trackSale:
     speakeasy-default-track-sale:
       requestBody:
-        application/json: {"externalId": "", "amount": 996500, "paymentProcessor": "paddle", "eventName": "Purchase", "invoiceId": null, "currency": "usd"}
+        application/json: {"externalId": "", "amount": 594903, "paymentProcessor": "<value>", "eventName": "Purchase", "invoiceId": null, "currency": "usd"}
       responses:
         "200":
-          application/json: {"eventName": "<value>", "customer": {"id": "<id>", "name": "<value>", "email": "Muhammad0@hotmail.com", "avatar": "https://loremflickr.com/2579/465?lock=3083028689214487", "externalId": "<id>"}, "sale": {"amount": 8968.61, "currency": "Saudi Riyal", "paymentProcessor": "<value>", "invoiceId": "<id>", "metadata": {"key": "<value>", "key1": "<value>"}}}
+          application/json: {"eventName": "<value>", "customer": {"id": "<id>", "name": "<value>", "email": "Garnett.Witting@gmail.com", "avatar": null, "externalId": null}, "sale": null}
         "400":
           application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
         "401":
@@ -382,7 +390,7 @@ examples:
   createReferralsEmbedToken:
     speakeasy-default-create-referrals-embed-token:
       requestBody:
-        application/json: {"programId": "<id>", "partner": {"name": "<value>", "email": "Florencio98@hotmail.com", "linkProps": {"externalId": "123456", "tagIds": ["clux0rgak00011..."]}}}
+        application/json: {"programId": "<id>", "partner": {"name": "<value>", "email": "Letha_Wuckert2@yahoo.com", "linkProps": {"externalId": "123456", "tagIds": ["clux0rgak00011..."], "testVariants": [{"url": "https://example.com/variant-1", "percentage": 50}, {"url": "https://example.com/variant-2", "percentage": 50}]}}}
       responses:
         "201":
           application/json: {"publicToken": "<value>", "expires": "<value>"}
@@ -408,14 +416,14 @@ examples:
     speakeasy-default-get-QR-code:
       parameters:
         query:
-          url: "https://normal-making.name"
+          url: "https://needy-newsstand.biz/"
           size: 600
           level: "L"
           fgColor: "#000000"
           bgColor: "#FFFFFF"
-          hideLogo: "false"
+          hideLogo: true
           margin: 2
-          includeMargin: "true"
+          includeMargin: false
       responses:
         "200":
           image/png: "<value>"
@@ -437,5 +445,6 @@ examples:
           application/json: {"error": {"code": "rate_limit_exceeded", "message": "The requested resource was not found."}}
         "500":
           application/json: {"error": {"code": "internal_server_error", "message": "The requested resource was not found."}}
-examplesVersion: 1.0.1
+examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: "## Typescript SDK Changes Detected:\n* `pimms.analytics.retrieve()`:  `request` **Changed** **Breaking** :warning:\n* `pimms.track.sale()`: \n  *  `request.paymentProcessor` **Changed** **Breaking** :warning:\n* `pimms.embedTokens.referrals()`: \n  *  `request.partner.linkProps` **Changed**\n"

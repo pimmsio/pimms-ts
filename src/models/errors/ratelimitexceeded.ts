@@ -6,6 +6,7 @@ import * as z from "zod";
 import { safeParse } from "../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
+import { PimmsError } from "./pimmserror.js";
 import { SDKValidationError } from "./sdkvalidationerror.js";
 
 /**
@@ -40,17 +41,20 @@ export type RateLimitExceededData = {
 /**
  * The user has sent too many requests in a given amount of time ("rate limiting")
  */
-export class RateLimitExceeded extends Error {
+export class RateLimitExceeded extends PimmsError {
   error: RateLimitExceededError;
 
   /** The original data that was passed to this error instance. */
   data$: RateLimitExceededData;
 
-  constructor(err: RateLimitExceededData) {
-    const message = err.error?.message || "API error occurred";
-    super(message);
+  constructor(
+    err: RateLimitExceededData,
+    httpMeta: { response: Response; request: Request; body: string },
+  ) {
+    const message = err.error?.message
+      || `API error occurred: ${JSON.stringify(err)}`;
+    super(message, httpMeta);
     this.data$ = err;
-
     this.error = err.error;
 
     this.name = "RateLimitExceeded";
@@ -142,9 +146,16 @@ export const RateLimitExceeded$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   error: z.lazy(() => RateLimitExceededError$inboundSchema),
+  request$: z.instanceof(Request),
+  response$: z.instanceof(Response),
+  body$: z.string(),
 })
   .transform((v) => {
-    return new RateLimitExceeded(v);
+    return new RateLimitExceeded(v, {
+      request: v.request$,
+      response: v.response$,
+      body: v.body$,
+    });
   });
 
 /** @internal */

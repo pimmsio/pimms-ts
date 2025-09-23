@@ -6,6 +6,7 @@ import * as z from "zod";
 import { safeParse } from "../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
+import { PimmsError } from "./pimmserror.js";
 import { SDKValidationError } from "./sdkvalidationerror.js";
 
 /**
@@ -40,17 +41,20 @@ export type UnauthorizedData = {
 /**
  * Although the HTTP standard specifies "unauthorized", semantically this response means "unauthenticated". That is, the client must authenticate itself to get the requested response.
  */
-export class Unauthorized extends Error {
+export class Unauthorized extends PimmsError {
   error: UnauthorizedError;
 
   /** The original data that was passed to this error instance. */
   data$: UnauthorizedData;
 
-  constructor(err: UnauthorizedData) {
-    const message = err.error?.message || "API error occurred";
-    super(message);
+  constructor(
+    err: UnauthorizedData,
+    httpMeta: { response: Response; request: Request; body: string },
+  ) {
+    const message = err.error?.message
+      || `API error occurred: ${JSON.stringify(err)}`;
+    super(message, httpMeta);
     this.data$ = err;
-
     this.error = err.error;
 
     this.name = "Unauthorized";
@@ -142,9 +146,16 @@ export const Unauthorized$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   error: z.lazy(() => UnauthorizedError$inboundSchema),
+  request$: z.instanceof(Request),
+  response$: z.instanceof(Response),
+  body$: z.string(),
 })
   .transform((v) => {
-    return new Unauthorized(v);
+    return new Unauthorized(v, {
+      request: v.request$,
+      response: v.response$,
+      body: v.body$,
+    });
   });
 
 /** @internal */

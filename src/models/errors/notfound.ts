@@ -6,6 +6,7 @@ import * as z from "zod";
 import { safeParse } from "../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
+import { PimmsError } from "./pimmserror.js";
 import { SDKValidationError } from "./sdkvalidationerror.js";
 
 /**
@@ -40,17 +41,20 @@ export type NotFoundData = {
 /**
  * The server cannot find the requested resource.
  */
-export class NotFound extends Error {
+export class NotFound extends PimmsError {
   error: NotFoundError;
 
   /** The original data that was passed to this error instance. */
   data$: NotFoundData;
 
-  constructor(err: NotFoundData) {
-    const message = err.error?.message || "API error occurred";
-    super(message);
+  constructor(
+    err: NotFoundData,
+    httpMeta: { response: Response; request: Request; body: string },
+  ) {
+    const message = err.error?.message
+      || `API error occurred: ${JSON.stringify(err)}`;
+    super(message, httpMeta);
     this.data$ = err;
-
     this.error = err.error;
 
     this.name = "NotFound";
@@ -136,9 +140,16 @@ export const NotFound$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   error: z.lazy(() => NotFoundError$inboundSchema),
+  request$: z.instanceof(Request),
+  response$: z.instanceof(Response),
+  body$: z.string(),
 })
   .transform((v) => {
-    return new NotFound(v);
+    return new NotFound(v, {
+      request: v.request$,
+      response: v.response$,
+      body: v.body$,
+    });
   });
 
 /** @internal */

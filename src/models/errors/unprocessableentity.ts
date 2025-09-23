@@ -6,6 +6,7 @@ import * as z from "zod";
 import { safeParse } from "../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
+import { PimmsError } from "./pimmserror.js";
 import { SDKValidationError } from "./sdkvalidationerror.js";
 
 /**
@@ -42,17 +43,20 @@ export type UnprocessableEntityData = {
 /**
  * The request was well-formed but was unable to be followed due to semantic errors.
  */
-export class UnprocessableEntity extends Error {
+export class UnprocessableEntity extends PimmsError {
   error: UnprocessableEntityError;
 
   /** The original data that was passed to this error instance. */
   data$: UnprocessableEntityData;
 
-  constructor(err: UnprocessableEntityData) {
-    const message = err.error?.message || "API error occurred";
-    super(message);
+  constructor(
+    err: UnprocessableEntityData,
+    httpMeta: { response: Response; request: Request; body: string },
+  ) {
+    const message = err.error?.message
+      || `API error occurred: ${JSON.stringify(err)}`;
+    super(message, httpMeta);
     this.data$ = err;
-
     this.error = err.error;
 
     this.name = "UnprocessableEntity";
@@ -144,9 +148,16 @@ export const UnprocessableEntity$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   error: z.lazy(() => UnprocessableEntityError$inboundSchema),
+  request$: z.instanceof(Request),
+  response$: z.instanceof(Response),
+  body$: z.string(),
 })
   .transform((v) => {
-    return new UnprocessableEntity(v);
+    return new UnprocessableEntity(v, {
+      request: v.request$,
+      response: v.response$,
+      body: v.body$,
+    });
   });
 
 /** @internal */

@@ -13,6 +13,7 @@ Retrieve analytics for a link, a domain, or the authenticated workspace. The res
 
 ### Example Usage
 
+<!-- UsageSnippet language="typescript" operationID="retrieveAnalytics" method="get" path="/analytics" -->
 ```typescript
 import { Pimms } from "pimms";
 
@@ -22,15 +23,14 @@ const pimms = new Pimms({
 
 async function run() {
   const result = await pimms.analytics.retrieve({
+    timezone: "America/New_York",
     city: "New York",
     device: "Desktop",
     browser: "Chrome",
     os: "Windows",
-    referer: "google.com",
     refererUrl: "https://pimms.io/blog",
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -53,22 +53,19 @@ const pimms = new PimmsCore({
 
 async function run() {
   const res = await analyticsRetrieve(pimms, {
+    timezone: "America/New_York",
     city: "New York",
     device: "Desktop",
     browser: "Chrome",
     os: "Windows",
-    referer: "google.com",
     refererUrl: "https://pimms.io/blog",
   });
-
-  if (!res.ok) {
-    throw res.error;
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("analyticsRetrieve failed:", res.error);
   }
-
-  const { value: result } = res;
-
-  // Handle the result
-  console.log(result);
 }
 
 run();

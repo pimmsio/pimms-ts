@@ -11,7 +11,6 @@ import { safeParse } from "../lib/schemas.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { extractSecurity, resolveGlobalSecurity } from "../lib/security.js";
 import { pathToFunc } from "../lib/url.js";
-import { APIError } from "../models/errors/apierror.js";
 import {
   ConnectionError,
   InvalidRequestError,
@@ -20,6 +19,8 @@ import {
   UnexpectedClientError,
 } from "../models/errors/httpclienterrors.js";
 import * as errors from "../models/errors/index.js";
+import { PimmsError } from "../models/errors/pimmserror.js";
+import { ResponseValidationError } from "../models/errors/responsevalidationerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import * as operations from "../models/operations/index.js";
 import { APICall, APIPromise } from "../types/async.js";
@@ -47,13 +48,14 @@ export function qrCodesGet(
     | errors.UnprocessableEntity
     | errors.RateLimitExceeded
     | errors.InternalServerError
-    | APIError
-    | SDKValidationError
-    | UnexpectedClientError
-    | InvalidRequestError
+    | PimmsError
+    | ResponseValidationError
+    | ConnectionError
     | RequestAbortedError
     | RequestTimeoutError
-    | ConnectionError
+    | InvalidRequestError
+    | UnexpectedClientError
+    | SDKValidationError
   >
 > {
   return new APIPromise($do(
@@ -80,13 +82,14 @@ async function $do(
       | errors.UnprocessableEntity
       | errors.RateLimitExceeded
       | errors.InternalServerError
-      | APIError
-      | SDKValidationError
-      | UnexpectedClientError
-      | InvalidRequestError
+      | PimmsError
+      | ResponseValidationError
+      | ConnectionError
       | RequestAbortedError
       | RequestTimeoutError
-      | ConnectionError
+      | InvalidRequestError
+      | UnexpectedClientError
+      | SDKValidationError
     >,
     APICall,
   ]
@@ -125,6 +128,7 @@ async function $do(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
+    options: client._options,
     baseURL: options?.serverURL ?? client._baseURL ?? "",
     operationID: "getQRCode",
     oAuth2Scopes: [],
@@ -146,6 +150,7 @@ async function $do(
     headers: headers,
     query: query,
     body: body,
+    userAgent: client._options.userAgent,
     timeoutMs: options?.timeoutMs || client._options.timeoutMs || -1,
   }, options);
   if (!requestRes.ok) {
@@ -191,13 +196,14 @@ async function $do(
     | errors.UnprocessableEntity
     | errors.RateLimitExceeded
     | errors.InternalServerError
-    | APIError
-    | SDKValidationError
-    | UnexpectedClientError
-    | InvalidRequestError
+    | PimmsError
+    | ResponseValidationError
+    | ConnectionError
     | RequestAbortedError
     | RequestTimeoutError
-    | ConnectionError
+    | InvalidRequestError
+    | UnexpectedClientError
+    | SDKValidationError
   >(
     M.text(200, z.string(), { ctype: "image/png" }),
     M.jsonErr(400, errors.BadRequest$inboundSchema),
@@ -211,7 +217,7 @@ async function $do(
     M.jsonErr(500, errors.InternalServerError$inboundSchema),
     M.fail("4XX"),
     M.fail("5XX"),
-  )(response, { extraFields: responseFields });
+  )(response, req, { extraFields: responseFields });
   if (!result.ok) {
     return [result, { status: "complete", request: req, response }];
   }

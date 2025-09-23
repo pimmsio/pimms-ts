@@ -30,6 +30,7 @@ export type Event = ClosedEnum<typeof Event>;
 export const GroupBy = {
   Count: "count",
   Timeseries: "timeseries",
+  LinkTimeseries: "link_timeseries",
   Continents: "continents",
   Regions: "regions",
   Countries: "countries",
@@ -41,6 +42,7 @@ export const GroupBy = {
   Triggers: "triggers",
   Referers: "referers",
   RefererUrls: "referer_urls",
+  Channels: "channels",
   TopLinks: "top_links",
   TopUrls: "top_urls",
   UtmSources: "utm_sources",
@@ -62,6 +64,7 @@ export const Interval = {
   Sevend: "7d",
   Thirtyd: "30d",
   Ninetyd: "90d",
+  Sixm: "6m",
   Oney: "1y",
   Mtd: "mtd",
   Qtd: "qtd",
@@ -84,6 +87,11 @@ export const Trigger = {
  * The trigger to retrieve analytics for. If undefined, return both QR and link clicks.
  */
 export type Trigger = ClosedEnum<typeof Trigger>;
+
+/**
+ * The referers to retrieve analytics for. Can be multiple referers as comma-separated list.
+ */
+export type Referer = string | Array<string>;
 
 /**
  * The tag IDs to retrieve analytics for.
@@ -127,6 +135,10 @@ export type RetrieveAnalyticsRequest = {
    * The ID of the partner to retrieve analytics for.
    */
   partnerId?: string | undefined;
+  /**
+   * The ID of the customer to retrieve analytics for.
+   */
+  customerId?: string | undefined;
   /**
    * The interval to retrieve analytics for. If undefined, defaults to 24h.
    */
@@ -176,9 +188,9 @@ export type RetrieveAnalyticsRequest = {
    */
   trigger?: Trigger | undefined;
   /**
-   * The referer to retrieve analytics for.
+   * The referers to retrieve analytics for. Can be multiple referers as comma-separated list.
    */
-  referer?: string | undefined;
+  referer?: string | Array<string> | undefined;
   /**
    * The full referer URL to retrieve analytics for.
    */
@@ -326,6 +338,47 @@ export namespace Trigger$ {
 }
 
 /** @internal */
+export const Referer$inboundSchema: z.ZodType<Referer, z.ZodTypeDef, unknown> =
+  z.union([z.string(), z.array(z.string())]);
+
+/** @internal */
+export type Referer$Outbound = string | Array<string>;
+
+/** @internal */
+export const Referer$outboundSchema: z.ZodType<
+  Referer$Outbound,
+  z.ZodTypeDef,
+  Referer
+> = z.union([z.string(), z.array(z.string())]);
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace Referer$ {
+  /** @deprecated use `Referer$inboundSchema` instead. */
+  export const inboundSchema = Referer$inboundSchema;
+  /** @deprecated use `Referer$outboundSchema` instead. */
+  export const outboundSchema = Referer$outboundSchema;
+  /** @deprecated use `Referer$Outbound` instead. */
+  export type Outbound = Referer$Outbound;
+}
+
+export function refererToJSON(referer: Referer): string {
+  return JSON.stringify(Referer$outboundSchema.parse(referer));
+}
+
+export function refererFromJSON(
+  jsonString: string,
+): SafeParseResult<Referer, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Referer$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Referer' from JSON`,
+  );
+}
+
+/** @internal */
 export const QueryParamTagIds$inboundSchema: z.ZodType<
   QueryParamTagIds,
   z.ZodTypeDef,
@@ -388,6 +441,7 @@ export const RetrieveAnalyticsRequest$inboundSchema: z.ZodType<
   tenantId: z.string().optional(),
   programId: z.string().optional(),
   partnerId: z.string().optional(),
+  customerId: z.string().optional(),
   interval: Interval$inboundSchema.optional(),
   start: z.string().optional(),
   end: z.string().optional(),
@@ -400,7 +454,7 @@ export const RetrieveAnalyticsRequest$inboundSchema: z.ZodType<
   browser: z.string().optional(),
   os: z.string().optional(),
   trigger: Trigger$inboundSchema.optional(),
-  referer: z.string().optional(),
+  referer: z.union([z.string(), z.array(z.string())]).optional(),
   refererUrl: z.string().optional(),
   url: z.string().optional(),
   tagId: z.string().optional(),
@@ -434,6 +488,7 @@ export type RetrieveAnalyticsRequest$Outbound = {
   tenantId?: string | undefined;
   programId?: string | undefined;
   partnerId?: string | undefined;
+  customerId?: string | undefined;
   interval?: string | undefined;
   start?: string | undefined;
   end?: string | undefined;
@@ -446,7 +501,7 @@ export type RetrieveAnalyticsRequest$Outbound = {
   browser?: string | undefined;
   os?: string | undefined;
   trigger?: string | undefined;
-  referer?: string | undefined;
+  referer?: string | Array<string> | undefined;
   refererUrl?: string | undefined;
   url?: string | undefined;
   tagId?: string | undefined;
@@ -476,6 +531,7 @@ export const RetrieveAnalyticsRequest$outboundSchema: z.ZodType<
   tenantId: z.string().optional(),
   programId: z.string().optional(),
   partnerId: z.string().optional(),
+  customerId: z.string().optional(),
   interval: Interval$outboundSchema.optional(),
   start: z.string().optional(),
   end: z.string().optional(),
@@ -488,7 +544,7 @@ export const RetrieveAnalyticsRequest$outboundSchema: z.ZodType<
   browser: z.string().optional(),
   os: z.string().optional(),
   trigger: Trigger$outboundSchema.optional(),
-  referer: z.string().optional(),
+  referer: z.union([z.string(), z.array(z.string())]).optional(),
   refererUrl: z.string().optional(),
   url: z.string().optional(),
   tagId: z.string().optional(),

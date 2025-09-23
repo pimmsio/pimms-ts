@@ -1,6 +1,6 @@
-# UpsertLinkTagNames
+# Referer
 
-New or existing tag names to assign for improved readability and organization.
+The referers to retrieve analytics for. Can be multiple referers as comma-separated list.
 
 
 ## Supported Types

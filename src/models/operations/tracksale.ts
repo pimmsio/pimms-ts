@@ -4,22 +4,8 @@
 
 import * as z from "zod";
 import { safeParse } from "../../lib/schemas.js";
-import { ClosedEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
-
-/**
- * The payment processor via which the sale was made.
- */
-export const PaymentProcessor = {
-  Stripe: "stripe",
-  Shopify: "shopify",
-  Paddle: "paddle",
-} as const;
-/**
- * The payment processor via which the sale was made.
- */
-export type PaymentProcessor = ClosedEnum<typeof PaymentProcessor>;
 
 export type TrackSaleRequestBody = {
   /**
@@ -33,7 +19,7 @@ export type TrackSaleRequestBody = {
   /**
    * The payment processor via which the sale was made.
    */
-  paymentProcessor: PaymentProcessor;
+  paymentProcessor: string;
   /**
    * The name of the sale event. It can be used to track different types of event for example 'Purchase', 'Upgrade', 'Payment', etc.
    */
@@ -78,27 +64,6 @@ export type TrackSaleResponseBody = {
 };
 
 /** @internal */
-export const PaymentProcessor$inboundSchema: z.ZodNativeEnum<
-  typeof PaymentProcessor
-> = z.nativeEnum(PaymentProcessor);
-
-/** @internal */
-export const PaymentProcessor$outboundSchema: z.ZodNativeEnum<
-  typeof PaymentProcessor
-> = PaymentProcessor$inboundSchema;
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace PaymentProcessor$ {
-  /** @deprecated use `PaymentProcessor$inboundSchema` instead. */
-  export const inboundSchema = PaymentProcessor$inboundSchema;
-  /** @deprecated use `PaymentProcessor$outboundSchema` instead. */
-  export const outboundSchema = PaymentProcessor$outboundSchema;
-}
-
-/** @internal */
 export const TrackSaleRequestBody$inboundSchema: z.ZodType<
   TrackSaleRequestBody,
   z.ZodTypeDef,
@@ -106,7 +71,7 @@ export const TrackSaleRequestBody$inboundSchema: z.ZodType<
 > = z.object({
   externalId: z.string().default(""),
   amount: z.number().int(),
-  paymentProcessor: PaymentProcessor$inboundSchema,
+  paymentProcessor: z.string(),
   eventName: z.string().default("Purchase"),
   invoiceId: z.nullable(z.string()).default(null),
   currency: z.string().default("usd"),
@@ -132,7 +97,7 @@ export const TrackSaleRequestBody$outboundSchema: z.ZodType<
 > = z.object({
   externalId: z.string().default(""),
   amount: z.number().int(),
-  paymentProcessor: PaymentProcessor$outboundSchema,
+  paymentProcessor: z.string(),
   eventName: z.string().default("Purchase"),
   invoiceId: z.nullable(z.string()).default(null),
   currency: z.string().default("usd"),
