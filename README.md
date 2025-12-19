@@ -12,7 +12,7 @@ Developer-friendly & type-safe Typescript SDK specifically catered to leverage *
 <!-- Start Summary [summary] -->
 ## Summary
 
-PIMMS API: PIMMS | Grow with deeplinks
+Pimms API: Pimms | Tracking beyond Clicks
 <!-- End Summary [summary] -->
 
 <!-- Start Table of Contents [toc] -->
@@ -62,10 +62,7 @@ bun add pimms
 ### Yarn
 
 ```bash
-yarn add pimms zod
-
-# Note that Yarn does not install peer dependencies automatically. You will need
-# to install zod as shown above.
+yarn add pimms
 ```
 
 > [!NOTE]
@@ -183,7 +180,6 @@ async function run() {
     ],
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -209,7 +205,6 @@ async function run() {
     ],
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -246,7 +241,6 @@ async function run() {
     ],
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -261,25 +255,24 @@ run();
 <details open>
 <summary>Available methods</summary>
 
-### [analytics](docs/sdks/analytics/README.md)
+### [Analytics](docs/sdks/analytics/README.md)
 
 * [retrieve](docs/sdks/analytics/README.md#retrieve) - Retrieve analytics for a link, a domain, or the authenticated workspace.
 
-### [embedTokens](docs/sdks/embedtokens/README.md)
+### [EmbedTokens](docs/sdks/embedtokens/README.md)
 
 * [referrals](docs/sdks/embedtokens/README.md#referrals) - Create a new referrals embed token
 
-### [links](docs/sdks/links/README.md)
+### [Links](docs/sdks/links/README.md)
 
 * [create](docs/sdks/links/README.md#create) - Create a new link
 * [upsert](docs/sdks/links/README.md#upsert) - Upsert a link
 
-
-### [qrCodes](docs/sdks/qrcodes/README.md)
+### [QRCodes](docs/sdks/qrcodes/README.md)
 
 * [get](docs/sdks/qrcodes/README.md#get) - Retrieve a QR code
 
-### [track](docs/sdks/track/README.md)
+### [Track](docs/sdks/track/README.md)
 
 * [lead](docs/sdks/track/README.md#lead) - Track a lead
 * [sale](docs/sdks/track/README.md#sale) - Track a sale
@@ -346,7 +339,6 @@ async function run() {
     },
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -381,7 +373,6 @@ async function run() {
     ],
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -393,46 +384,29 @@ run();
 <!-- Start Error Handling [errors] -->
 ## Error Handling
 
-Some methods specify known errors which can be thrown. All the known errors are enumerated in the `models/errors/errors.ts` module. The known errors for a method are documented under the *Errors* tables in SDK docs. For example, the `create` method may throw the following errors:
+[`PimmsError`](./src/models/errors/pimmserror.ts) is the base class for all HTTP error responses. It has the following properties:
 
-| Error Type                 | Status Code | Content Type     |
-| -------------------------- | ----------- | ---------------- |
-| errors.BadRequest          | 400         | application/json |
-| errors.Unauthorized        | 401         | application/json |
-| errors.Forbidden           | 403         | application/json |
-| errors.NotFound            | 404         | application/json |
-| errors.Conflict            | 409         | application/json |
-| errors.InviteExpired       | 410         | application/json |
-| errors.UnprocessableEntity | 422         | application/json |
-| errors.RateLimitExceeded   | 429         | application/json |
-| errors.InternalServerError | 500         | application/json |
-| errors.APIError            | 4XX, 5XX    | \*/\*            |
+| Property            | Type       | Description                                                                             |
+| ------------------- | ---------- | --------------------------------------------------------------------------------------- |
+| `error.message`     | `string`   | Error message                                                                           |
+| `error.statusCode`  | `number`   | HTTP response status code eg `404`                                                      |
+| `error.headers`     | `Headers`  | HTTP response headers                                                                   |
+| `error.body`        | `string`   | HTTP body. Can be empty string if no body is returned.                                  |
+| `error.rawResponse` | `Response` | Raw HTTP response                                                                       |
+| `error.data$`       |            | Optional. Some errors may contain structured data. [See Error Classes](#error-classes). |
 
-If the method throws an error and it is not captured by the known errors, it will default to throwing a `APIError`.
-
+### Example
 ```typescript
 import { Pimms } from "pimms";
-import {
-  BadRequest,
-  Conflict,
-  Forbidden,
-  InternalServerError,
-  InviteExpired,
-  NotFound,
-  RateLimitExceeded,
-  SDKValidationError,
-  Unauthorized,
-  UnprocessableEntity,
-} from "pimms/models/errors";
+import * as errors from "pimms/models/errors";
 
 const pimms = new Pimms({
   token: "PIMMS_API_KEY",
 });
 
 async function run() {
-  let result;
   try {
-    result = await pimms.links.create({
+    const result = await pimms.links.create({
       url: "https://pimms.io",
       externalId: "123456",
       tagIds: [
@@ -440,66 +414,18 @@ async function run() {
       ],
     });
 
-    // Handle the result
     console.log(result);
-  } catch (err) {
-    switch (true) {
-      // The server response does not match the expected SDK schema
-      case (err instanceof SDKValidationError): {
-        // Pretty-print will provide a human-readable multi-line error message
-        console.error(err.pretty());
-        // Raw value may also be inspected
-        console.error(err.rawValue);
-        return;
-      }
-      case (err instanceof BadRequest): {
-        // Handle err.data$: BadRequestData
-        console.error(err);
-        return;
-      }
-      case (err instanceof Unauthorized): {
-        // Handle err.data$: UnauthorizedData
-        console.error(err);
-        return;
-      }
-      case (err instanceof Forbidden): {
-        // Handle err.data$: ForbiddenData
-        console.error(err);
-        return;
-      }
-      case (err instanceof NotFound): {
-        // Handle err.data$: NotFoundData
-        console.error(err);
-        return;
-      }
-      case (err instanceof Conflict): {
-        // Handle err.data$: ConflictData
-        console.error(err);
-        return;
-      }
-      case (err instanceof InviteExpired): {
-        // Handle err.data$: InviteExpiredData
-        console.error(err);
-        return;
-      }
-      case (err instanceof UnprocessableEntity): {
-        // Handle err.data$: UnprocessableEntityData
-        console.error(err);
-        return;
-      }
-      case (err instanceof RateLimitExceeded): {
-        // Handle err.data$: RateLimitExceededData
-        console.error(err);
-        return;
-      }
-      case (err instanceof InternalServerError): {
-        // Handle err.data$: InternalServerErrorData
-        console.error(err);
-        return;
-      }
-      default: {
-        // Other errors such as network errors, see HTTPClientErrors for more details
-        throw err;
+  } catch (error) {
+    // The base class for HTTP error responses
+    if (error instanceof errors.PimmsError) {
+      console.log(error.message);
+      console.log(error.statusCode);
+      console.log(error.body);
+      console.log(error.headers);
+
+      // Depending on the method different errors may be thrown
+      if (error instanceof errors.BadRequest) {
+        console.log(error.data$.error); // errors.ErrorT
       }
     }
   }
@@ -509,17 +435,35 @@ run();
 
 ```
 
-Validation errors can also occur when either method arguments or data returned from the server do not match the expected format. The `SDKValidationError` that is thrown as a result will capture the raw value that failed validation in an attribute called `rawValue`. Additionally, a `pretty()` method is available on this error that can be used to log a nicely formatted multi-line string since validation errors can list many issues and the plain error string may be difficult read when debugging.
+### Error Classes
+**Primary errors:**
+* [`PimmsError`](./src/models/errors/pimmserror.ts): The base class for HTTP error responses.
+  * [`BadRequest`](./src/models/errors/badrequest.ts): The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). Status code `400`.
+  * [`Unauthorized`](./src/models/errors/unauthorized.ts): Although the HTTP standard specifies "unauthorized", semantically this response means "unauthenticated". That is, the client must authenticate itself to get the requested response. Status code `401`.
+  * [`Forbidden`](./src/models/errors/forbidden.ts): The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource. Unlike 401 Unauthorized, the client's identity is known to the server. Status code `403`.
+  * [`NotFound`](./src/models/errors/notfound.ts): The server cannot find the requested resource. Status code `404`.
+  * [`Conflict`](./src/models/errors/conflict.ts): This response is sent when a request conflicts with the current state of the server. Status code `409`.
+  * [`InviteExpired`](./src/models/errors/inviteexpired.ts): This response is sent when the requested content has been permanently deleted from server, with no forwarding address. Status code `410`.
+  * [`UnprocessableEntity`](./src/models/errors/unprocessableentity.ts): The request was well-formed but was unable to be followed due to semantic errors. Status code `422`.
+  * [`RateLimitExceeded`](./src/models/errors/ratelimitexceeded.ts): The user has sent too many requests in a given amount of time ("rate limiting"). Status code `429`.
+  * [`InternalServerError`](./src/models/errors/internalservererror.ts): The server has encountered a situation it does not know how to handle. Status code `500`.
 
-In some rare cases, the SDK can fail to get a response from the server or even make the request due to unexpected circumstances such as network conditions. These types of errors are captured in the `models/errors/httpclienterrors.ts` module:
+<details><summary>Less common errors (6)</summary>
 
-| HTTP Client Error                                    | Description                                          |
-| ---------------------------------------------------- | ---------------------------------------------------- |
-| RequestAbortedError                                  | HTTP request was aborted by the client               |
-| RequestTimeoutError                                  | HTTP request timed out due to an AbortSignal signal  |
-| ConnectionError                                      | HTTP client was unable to make a request to a server |
-| InvalidRequestError                                  | Any input used to create a request is invalid        |
-| UnexpectedClientError                                | Unrecognised or unexpected error                     |
+<br />
+
+**Network errors:**
+* [`ConnectionError`](./src/models/errors/httpclienterrors.ts): HTTP client was unable to make a request to a server.
+* [`RequestTimeoutError`](./src/models/errors/httpclienterrors.ts): HTTP request timed out due to an AbortSignal signal.
+* [`RequestAbortedError`](./src/models/errors/httpclienterrors.ts): HTTP request was aborted by the client.
+* [`InvalidRequestError`](./src/models/errors/httpclienterrors.ts): Any input used to create a request is invalid.
+* [`UnexpectedClientError`](./src/models/errors/httpclienterrors.ts): Unrecognised or unexpected error.
+
+
+**Inherit from [`PimmsError`](./src/models/errors/pimmserror.ts)**:
+* [`ResponseValidationError`](./src/models/errors/responsevalidationerror.ts): Type mismatch between the data returned from the server and the structure expected by the SDK. See `error.rawValue` for the raw value and `error.pretty()` for a nicely formatted multi-line string.
+
+</details>
 <!-- End Error Handling [errors] -->
 
 <!-- Start Server Selection [server] -->
@@ -545,7 +489,6 @@ async function run() {
     ],
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -599,7 +542,7 @@ httpClient.addHook("requestError", (error, request) => {
   console.groupEnd();
 });
 
-const sdk = new Pimms({ httpClient });
+const sdk = new Pimms({ httpClient: httpClient });
 ```
 <!-- End Custom HTTP Client [http-client] -->
 
