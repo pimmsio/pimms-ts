@@ -7,8 +7,8 @@ import { env } from "./env.js";
 
 type OAuth2PasswordFlow = {
   username: string;
-  password?: string | undefined;
-  clientID: string;
+  password: string;
+  clientID?: string | undefined;
   clientSecret?: string | undefined;
   tokenURL: string;
 };
@@ -84,7 +84,10 @@ type SecurityInputOAuth2 = {
 type SecurityInputOAuth2ClientCredentials = {
   type: "oauth2:client_credentials";
   value:
-    | { clientID?: string | undefined; clientSecret?: string | undefined }
+    | {
+      clientID?: string | undefined;
+      clientSecret?: string | undefined;
+    }
     | null
     | string
     | undefined;
@@ -195,8 +198,7 @@ export function resolveSecurity(
         applyBearer(state, spec);
         break;
       default:
-        spec satisfies never;
-        throw SecurityError.unrecognizedType(type);
+        throw SecurityError.unrecognizedType((spec satisfies never, type));
     }
   });
 

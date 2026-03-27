@@ -1,36 +1,1041 @@
 lockVersion: 2.0.0
 id: 68d0a527-4644-4531-8364-947c54d97e44
 management:
-  docChecksum: 1b82071fa06081a806cba77d15db7dd2
+  docChecksum: 45fb13c9d2fdd4f84bbc4a7217839502
   docVersion: 0.0.1
-  speakeasyVersion: 1.529.1
-  generationVersion: 2.566.5
-  releaseVersion: 0.4.0
-  configChecksum: 3597f667d7c8c54893f2f78fe302f0f8
+  speakeasyVersion: 1.759.3
+  generationVersion: 2.869.25
+  releaseVersion: 0.5.0
+  configChecksum: a9f50fffe00b3560767acca1ee1b2c08
+  repoURL: https://github.com/pimmsio/pimms-ts.git
+  installationURL: https://github.com/pimmsio/pimms-ts
   published: true
+persistentEdits:
+  generation_id: 993c47ad-1f52-4b5a-af4b-5cd71c1dd1a1
+  pristine_commit_hash: 614a26baf3b0ddae8033d4e06f500d03b00406fa
+  pristine_tree_hash: c684608387ce398aecfa8e90ed5fdc8987c8bbfd
 features:
   typescript:
     additionalDependencies: 0.1.0
-    constsAndDefaults: 0.1.11
-    core: 3.21.5
+    constsAndDefaults: 0.1.14
+    core: 3.26.44
     defaultEnabledRetries: 0.1.0
     deprecations: 2.81.1
-    devContainers: 2.90.0
+    devContainers: 2.90.1
     enumUnions: 0.1.0
     envVarSecurityUsage: 0.1.2
-    errors: 2.84.0
-    examples: 2.81.5
-    globalSecurity: 2.82.13
+    errors: 2.86.2
+    examples: 2.82.5
+    globalSecurity: 2.82.15
     globalSecurityCallbacks: 0.1.0
-    globalSecurityFlattening: 0.1.0
-    globalServerURLs: 2.82.4
-    mcpServer: 0.9.0
-    nameOverrides: 2.81.2
+    globalSecurityFlattening: 0.1.1
+    globalServerURLs: 2.83.1
+    mcpServer: 0.9.4
+    nameOverrides: 2.81.4
     nullables: 0.1.1
-    responseFormat: 0.2.3
+    responseFormat: 0.3.0
     retries: 2.83.0
-    sdkHooks: 0.2.0
-    unions: 2.85.8
+    sdkHooks: 0.4.0
+    unions: 2.86.4
+trackedFiles:
+  .devcontainer/README.md:
+    id: b170c0f184ac
+    last_write_checksum: sha1:e01ef451844da0a2e1c472aa889641136d07750e
+    pristine_git_object: da30cb51dcb420da39cb5f3b002a3affe445bf33
+  .devcontainer/devcontainer.json:
+    id: b34062a34eb1
+    last_write_checksum: sha1:d0b15193202c961e7d1875864ddb15f9d17c84dd
+    pristine_git_object: 4d560dd5f40afaf10d96eb75b1f02cd48bbd640c
+  .devcontainer/setup.sh:
+    id: 5f1dfbfeb8eb
+    last_write_checksum: sha1:0b71d99b6b1fb1f2f3863fb6733195535b045d30
+    pristine_git_object: e6c8ae6d0e7daebe06c6bda1279fbca5e234b01b
+  .gitattributes:
+    id: 24139dae6567
+    last_write_checksum: sha1:26d16d8297b104945139da8c25bd38feeaad3e25
+    pristine_git_object: 113eead5093c17d43a46159132885318f281a68a
+  .npmignore:
+    id: aa70c1f807c3
+    last_write_checksum: sha1:6572da81f2e7a978ec29c22c2210bf461c5897b2
+    pristine_git_object: 670ac0a62d7e568c9d44a14f5deafb8442a255d8
+  FUNCTIONS.md:
+    id: 21b9df02aaeb
+    last_write_checksum: sha1:22b6bfc302118c0b07bb27148206f1fe9c2d464c
+    pristine_git_object: 4f74791c9c32ac9fa7979315d1d07ea3cab79bc9
+  RUNTIMES.md:
+    id: 620c490847b6
+    last_write_checksum: sha1:e45b854f02c357cbcfdb8c3663000e8339e16505
+    pristine_git_object: 27731c3b5ace66bedc454ed5acbe15075aacd3dc
+  USAGE.md:
+    id: 3aed33ce6e6f
+    last_write_checksum: sha1:9fbc79fff53013d2f9ecaea5ebd3cc58d7196e14
+    pristine_git_object: ca9a5074d300bd0d0354a53cc75419e332801db2
+  docs/lib/utils/retryconfig.md:
+    id: 0ce9707cb848
+    last_write_checksum: sha1:bc4454e196fcd219f5a78da690375a884f5ed07b
+    pristine_git_object: 08f95f4552349360b2c0b01802aa71ec3a55d2c2
+  docs/models/components/analyticsbrowsers.md:
+    id: 3abdbb8e966c
+    last_write_checksum: sha1:729432fdb473d75b91033a4612291346a9ae7ac0
+    pristine_git_object: e43f23d2fe19b6449f1e1ce23a841c063ed2893f
+  docs/models/components/analyticscities.md:
+    id: eeef23404f31
+    last_write_checksum: sha1:c3f8447e592ad6f450c831d470ac11335e4fcce9
+    pristine_git_object: f5593043819c4bd0d3c22797c20a9a716b2c4da9
+  docs/models/components/analyticscitiescountry.md:
+    id: af98428a5112
+    last_write_checksum: sha1:628f4f0b196c57ce51c1cc16825a053889c1b8da
+    pristine_git_object: 5f1c00e215bfa2148da30ef7b3719fd1b675fe63
+  docs/models/components/analyticscitiesregion.md:
+    id: 2df906c6b31e
+    last_write_checksum: sha1:9fb445a2635faa74dab2baf9866edfaca997aef0
+    pristine_git_object: 0c407e0ec89a21ccf48c8700bf85eadea0d3c95e
+  docs/models/components/analyticscontinents.md:
+    id: 5edfedb596c7
+    last_write_checksum: sha1:d6e620fb8e9e4f63625fbf57423d58c60dbf1da5
+    pristine_git_object: a77b71e8bc739ee269bf4f9689c49c3560d7573b
+  docs/models/components/analyticscount.md:
+    id: 5ab393bb64fe
+    last_write_checksum: sha1:9f6dceb98cd3ab027059bce38c204bda0996bd85
+    pristine_git_object: f28ebc5f87bf125c707ae1ce2ae6c709159ac04f
+  docs/models/components/analyticscountries.md:
+    id: e7a97cc25d59
+    last_write_checksum: sha1:169d1caf27b7f7b7e05a19d62801109e298b8c7d
+    pristine_git_object: f3ccea152210f6a730287d5891a287abff28dc96
+  docs/models/components/analyticsdevices.md:
+    id: e335eabce7c0
+    last_write_checksum: sha1:a39b9f7179f3376363104bb871def2fbb38dc949
+    pristine_git_object: d57398e8bcb35ecc88e775658289a35a165fb9bc
+  docs/models/components/analyticsos.md:
+    id: c696c9792d14
+    last_write_checksum: sha1:718575cf47a5a0b1ac78d8b661053cbc18990ab5
+    pristine_git_object: 0e7120742ac1e4fb6d3057311b47370756721398
+  docs/models/components/analyticsreferers.md:
+    id: 0146adb78db9
+    last_write_checksum: sha1:876866ec17c5b77ff8762153df85a5ccc869f4e5
+    pristine_git_object: 93240b6c36097ae95e1b45a78bcaff8b2edbe2fa
+  docs/models/components/analyticsrefererurls.md:
+    id: 9dc35a3ffa22
+    last_write_checksum: sha1:efc988e1bd8dc8555ec9215c5ed69360c3fc07cd
+    pristine_git_object: 5885d989ad040719f1a005079368d02d66ad7968
+  docs/models/components/analyticsregions.md:
+    id: 77b0833be4c1
+    last_write_checksum: sha1:4da5b388a22830f62ac42c79c4fa5d4096244d55
+    pristine_git_object: bea0bea1040dda7225d85669eabe4680a681c62a
+  docs/models/components/analyticsregionscity.md:
+    id: 3ebc99123412
+    last_write_checksum: sha1:79c75cbdbccbc24e02b564bdb76dbe470577324b
+    pristine_git_object: ed15ac18eaeacde7241c91fbb5cd47a70726b023
+  docs/models/components/analyticsregionscountry.md:
+    id: 3b69815289cc
+    last_write_checksum: sha1:d8cf620b7094ccb067bb121fa54cad0ff6cf0b0d
+    pristine_git_object: bac345a56cab7d9abe5981e1f719857c11352b3f
+  docs/models/components/analyticstimeseries.md:
+    id: 65e2cf3d1750
+    last_write_checksum: sha1:b24d106e3a8186970b5db1300227637013168194
+    pristine_git_object: 8a81040b8eb363f243805490d9f5be74adfa8cfc
+  docs/models/components/analyticstoplinks.md:
+    id: 3b0d410cf709
+    last_write_checksum: sha1:69731346ba8c7364bf36585b825c6068891a3c9e
+    pristine_git_object: 0f17384dce3a7c91f52b745507491abfe8d8ff0b
+  docs/models/components/analyticstopurls.md:
+    id: dccdcdf0d7af
+    last_write_checksum: sha1:ec8f29a2770df8d83dc9838c32ea4e853a61124b
+    pristine_git_object: f59fc72baebe0a70cdd767e88b7cacd8adc9463e
+  docs/models/components/analyticstriggers.md:
+    id: d6ea103c1c6f
+    last_write_checksum: sha1:8fb2b06e5d11f062cae7f3f8d1206d55a1583006
+    pristine_git_object: f57c8370191feb9a75f435cb31b5fbd5f7dfbb08
+  docs/models/components/city.md:
+    id: cbd6abdec0ac
+    last_write_checksum: sha1:e88f1d8a9c5ee28f8b56fc5524ebdf802fac2e37
+    pristine_git_object: 5b8862ee8d96b1f0a62ac3c224cf8dbb333d7da6
+  docs/models/components/continent.md:
+    id: af73e265b445
+    last_write_checksum: sha1:0ae529a40428b4b54a7ccf3505e591d7a0e48c8d
+    pristine_git_object: a66137638e26b15687793e1834d45c44f54628a6
+  docs/models/components/continentcode.md:
+    id: 1a930fd7e956
+    last_write_checksum: sha1:b0355c8851119234eb42219f33b6bb38b8e5853b
+    pristine_git_object: f3a88e4f9ec30e4f3b315e2d0315f8fbdc6e4dc1
+  docs/models/components/country.md:
+    id: bece05c056e0
+    last_write_checksum: sha1:662fd009f56cc7d461b44353ebd19af5deb67507
+    pristine_git_object: cd16c9590eacdbdfd1d29aeef21f588bcb1a8190
+  docs/models/components/countrycode.md:
+    id: af7658b93ff9
+    last_write_checksum: sha1:95714988107639b525316d58c043a8041973fa9a
+    pristine_git_object: 44ca61b2a7b9b2a099635f432129762fa3b75562
+  docs/models/components/region.md:
+    id: 4290b6a3b093
+    last_write_checksum: sha1:c679ca73e37108dcc1eff2921a307479fe31aa15
+    pristine_git_object: 24168f0c68d612a4e760a5f128a6b7186b832f0c
+  docs/models/components/security.md:
+    id: 54906b49ea28
+    last_write_checksum: sha1:b0e7ad557486453c66895679e058cf326f2cf4de
+    pristine_git_object: 50dcd05824aeab9a9bcd3a51be8d18732ebd9e39
+  docs/models/components/trigger.md:
+    id: a5cba760fe3c
+    last_write_checksum: sha1:e55df45a679ad427a59a323db10c5610c45eedbe
+    pristine_git_object: 9c56fe139fbf7a7f4ea943dde9636b7a554a899c
+  docs/models/errors/badrequest.md:
+    id: c0d0c970baf3
+    last_write_checksum: sha1:e22dd198619203ce3e7eff595364786af5aa478e
+    pristine_git_object: 6e398ec7dfaa123a36d7882b9ca8a799d50a7a56
+  docs/models/errors/code.md:
+    id: 28e8518e8835
+    last_write_checksum: sha1:f71cdf07ddd7775e64dc71dde6f4fadfd21d0970
+    pristine_git_object: 44ac7961f8ad7dbcf23a2830dea64ba40fa80c2d
+  docs/models/errors/conflict.md:
+    id: 4dbff5df58df
+    last_write_checksum: sha1:8a55c7ab2dcea0dfdf6a2be6bf2a7a1656d56db4
+    pristine_git_object: 45424b8591922fe1b6d5c932f48c1d1e9f6b90f5
+  docs/models/errors/conflictcode.md:
+    id: 81c5173cd2f0
+    last_write_checksum: sha1:e4c6b0dc931fec9d649fdeccc5f56c179bf68470
+    pristine_git_object: 882e106c72497dbd9c042477e325ee1271ad2ba7
+  docs/models/errors/conflicterror.md:
+    id: 6603f6b5bf79
+    last_write_checksum: sha1:aed4a299ce1721f78684d804118b51b8e6241eff
+    pristine_git_object: bf051a25690096ba2eb53f1e2615be730c89ccfd
+  docs/models/errors/errort.md:
+    id: 0fc20860e35e
+    last_write_checksum: sha1:3e2ba345912a91da065327254a061531f5ecd00e
+    pristine_git_object: 9629014c2e25e9f15cf39db6f71fa8f4d5ae6db3
+  docs/models/errors/forbidden.md:
+    id: d746b7f5e944
+    last_write_checksum: sha1:3baa09393c25d5f38a90107b8245efacd0959027
+    pristine_git_object: b0b4fafb4998abce18e1621bf0dc4e3325b0aa88
+  docs/models/errors/forbiddencode.md:
+    id: 42e785fb7b2e
+    last_write_checksum: sha1:c02bdb391be2dcc53bebb00bf1ac3296c2689af7
+    pristine_git_object: 50a7d3639c86b9597eb91157dae3d1ae40e6ea2f
+  docs/models/errors/forbiddenerror.md:
+    id: 864d9ce736d0
+    last_write_checksum: sha1:d39e0624d47236ce63bd762cd80838a4ae11345f
+    pristine_git_object: e306f27fa7578a1d7a9f9598fad1a1e5291d561a
+  docs/models/errors/internalservererror.md:
+    id: 7fac1ae84198
+    last_write_checksum: sha1:90e65d2d0546aa73ecebc7b2d60075272bb3f88c
+    pristine_git_object: 6d700853789582dcfddd4bc92fabb5bd26658979
+  docs/models/errors/internalservererrorcode.md:
+    id: 03b9f010077e
+    last_write_checksum: sha1:fa38c5b71025279e6327c1d687eea3ce107e40ea
+    pristine_git_object: 834d91f07b108baa2811f0442674e426d90de57f
+  docs/models/errors/internalservererrorerror.md:
+    id: 4c8f1962ad77
+    last_write_checksum: sha1:a6e399375b9a6f0a6b2e9d5cb2d289e301c55ad0
+    pristine_git_object: a81731d1727fac68bcbfa94f6d0dc97e7bc6f8ed
+  docs/models/errors/inviteexpired.md:
+    id: 7d3c553f2a11
+    last_write_checksum: sha1:af9c85fb8c2e8618c235df53f6fe4cbc9f9b79c1
+    pristine_git_object: 8090b71190d79735ab712675e85f7a1b17afdc6e
+  docs/models/errors/inviteexpiredcode.md:
+    id: 6333a1432fbd
+    last_write_checksum: sha1:eec8e5f68399f0ae072281eb9bb38139bccd8ea2
+    pristine_git_object: b7c690a344aa4840cfaff8fba5a8901e7d746991
+  docs/models/errors/inviteexpirederror.md:
+    id: 88c5144155b0
+    last_write_checksum: sha1:86d5630fbe8f6e000f597f22f7d12b7acd93a89e
+    pristine_git_object: 7ce84a95b1a690f6a36f4ca927cecb659c424705
+  docs/models/errors/notfound.md:
+    id: 89f8902e68ce
+    last_write_checksum: sha1:8d3daa3e675e84c9af1771935451d0cfae28e926
+    pristine_git_object: 981a237534835677f4b3638a3f986112641c83e0
+  docs/models/errors/notfoundcode.md:
+    id: f98c507a71bf
+    last_write_checksum: sha1:d88290c7d46b633ef845542ba8154ad9332c69b0
+    pristine_git_object: af08956a5bad8b873eda8d477294713b26d179ed
+  docs/models/errors/notfounderror.md:
+    id: e6e9f31b7b5e
+    last_write_checksum: sha1:0ec12a2d7b02c583f4b20ed4e876973a6d63e1a8
+    pristine_git_object: af85c4d9d2b63159a21d102ce0dd8a335ba72bbb
+  docs/models/errors/ratelimitexceeded.md:
+    id: ab0effa19bcd
+    last_write_checksum: sha1:8bd1428c37ce9681ea0f54eeb36015f9f985b36f
+    pristine_git_object: f4928af65e537f1d2574b3fc198dd2ed70e8537a
+  docs/models/errors/ratelimitexceededcode.md:
+    id: a513fdb15bce
+    last_write_checksum: sha1:e99f8ab1a29390dfc99bf1ee9e73df5ef4046054
+    pristine_git_object: 385b33cbebb6d6a2e2fa7ca81f91aac6bf399b26
+  docs/models/errors/ratelimitexceedederror.md:
+    id: 341d6b6d4fc9
+    last_write_checksum: sha1:3e7c80c1701e088155eb44b90d561ad05e97b045
+    pristine_git_object: 21d06fa4af3d626a5f77b532bdde552b20ff6eb1
+  docs/models/errors/unauthorized.md:
+    id: 9b4414680030
+    last_write_checksum: sha1:70886ff44e5d2a5670388c2f3607ecdb0eefc18f
+    pristine_git_object: acf374caf5170d9a489472ec54dd0e3022c31340
+  docs/models/errors/unauthorizedcode.md:
+    id: 36284308d789
+    last_write_checksum: sha1:9bc29a41d819fa5eed195f3061892ff1d76de8ce
+    pristine_git_object: cad33b7be30f4c97de910ec10f451560704574c4
+  docs/models/errors/unauthorizederror.md:
+    id: 391e1ff1a10f
+    last_write_checksum: sha1:75d1abafa9cf5d4e4fd5c90a1ab208968612fcfb
+    pristine_git_object: d17489d6a995051fc52598e3649a888060bf6b9b
+  docs/models/errors/unprocessableentity.md:
+    id: 8c4520193386
+    last_write_checksum: sha1:0c0a4779da10d5d0e7af7deb354bdd81ebb09419
+    pristine_git_object: 58d6d7f068fb44d506a853d1d7607a45799b52b9
+  docs/models/errors/unprocessableentitycode.md:
+    id: b964eb4b0791
+    last_write_checksum: sha1:6bc05ef62999cef06545b222175632494cdaa026
+    pristine_git_object: da6ca5291d632d480de88487f0a7bf61f7188c63
+  docs/models/errors/unprocessableentityerror.md:
+    id: f8a246afadd4
+    last_write_checksum: sha1:db2fc8202c0b5a683f26158df27e0f6e58400b14
+    pristine_git_object: 677f95923f23a34ce2aa2b65472aecc1815c0673
+  docs/models/operations/click.md:
+    id: b0aaee0ad36a
+    last_write_checksum: sha1:c326d2f8e106ae66a9bd51af4cabfb8d96d3a24d
+    pristine_git_object: 1deae4e1d8ad2f9ffcf8dba8567a574c692882a2
+  docs/models/operations/color.md:
+    id: 2afca43b7ff1
+    last_write_checksum: sha1:8f55c53650d2b9bdad2266e2d0066a34387fb172
+    pristine_git_object: ab16ff42530d45836f90d09d1ea6d03c9c3fe9a2
+  docs/models/operations/createlinklink.md:
+    id: a811702971fb
+    last_write_checksum: sha1:106356337ba2e834e7649955c1dde49cfc24f682
+    pristine_git_object: 358336900d17a319091d2d24210e6ad72b24449e
+  docs/models/operations/createlinkrequestbody.md:
+    id: 86f3565eb7cb
+    last_write_checksum: sha1:f80a233d5efb4a60aea9b62f16adb261c8dd6ed7
+    pristine_git_object: 270b8ad07cf1792b75e0a8d0bac3ef346cff5dfd
+  docs/models/operations/customer.md:
+    id: 3c184b3427d9
+    last_write_checksum: sha1:07d7b452d3e7a94036ce9345aa0d8d52308e353e
+    pristine_git_object: 7adf917d7eafdee80990151961c253fc4170ee11
+  docs/models/operations/event.md:
+    id: 692313a333f0
+    last_write_checksum: sha1:feb8aa547d1eda3fc07955edc5ac148e2ffb3ee8
+    pristine_git_object: 982d20a23d8cace356af47dc8d61dacfce577b55
+  docs/models/operations/getqrcoderequest.md:
+    id: a2797e7b1d7c
+    last_write_checksum: sha1:3b7c755759645203bc2fa6fddb0642e3912479ba
+    pristine_git_object: 31d0cf9e75174aa49c1dcd1ecab671f8b4f217ec
+  docs/models/operations/groupby.md:
+    id: 1575cef31f36
+    last_write_checksum: sha1:4fb15f06b8791be567d7c74221c2b5d1b772d57b
+    pristine_git_object: b779a48200f443f2521c0825eaf32dc18b9c4a06
+  docs/models/operations/interval.md:
+    id: 3d404d276931
+    last_write_checksum: sha1:0a25845eff8ad4dacdde07f913e7fbd72ce0f442
+    pristine_git_object: 4c246a7a242dfbac3d002be43857e7cf5aff4f89
+  docs/models/operations/level.md:
+    id: 7456dc8265b6
+    last_write_checksum: sha1:9af2676187f7dda24b5e97afc46cba7811b30404
+    pristine_git_object: 043f1c35b6407ebb0765aff79f7dffb789ed4868
+  docs/models/operations/queryparamtagids.md:
+    id: 6872958eb323
+    last_write_checksum: sha1:a3ebd920ad62f1f2622226be79b92d0006b9df33
+    pristine_git_object: 585b2bb1eddb05e26e4df85e59ce3f0d3f4acff9
+  docs/models/operations/referer.md:
+    id: 7ef11a512465
+    last_write_checksum: sha1:e0ceb3e67c555408666032071d78a846e1ef892f
+    pristine_git_object: e7b26ad6177519ef1e1228f25e3c9f40a7aa9bbe
+  docs/models/operations/retrieveanalyticsrequest.md:
+    id: bfa89ce61897
+    last_write_checksum: sha1:2a93fc0172f3676c3cc83d8eef9f5360b5615102
+    pristine_git_object: d4c5b479c4b4e764a2dca23274417278ff9e671b
+  docs/models/operations/retrieveanalyticsresponsebody.md:
+    id: 41386a0b3f46
+    last_write_checksum: sha1:410fbe7014af53bc94f36df6a9dc9ca1b5a22468
+    pristine_git_object: 9974bc6428273eba118a1b38368ca3215ed666d0
+  docs/models/operations/sale.md:
+    id: 3e9ba36ec88c
+    last_write_checksum: sha1:fbdc05a147178357495826a45882bbde0c2ba0fb
+    pristine_git_object: 9b59b7bef1ef7178c7132518d7f979b46e65d413
+  docs/models/operations/sortmetric.md:
+    id: ad68b2504832
+    last_write_checksum: sha1:0017b204d690c2447997bddf6f091a4ccca2de20
+    pristine_git_object: b5e3407dac40ed0968b9e716b8849b2a0c4eed17
+  docs/models/operations/tag.md:
+    id: c2be981330e7
+    last_write_checksum: sha1:865daf4c1a350fea43db6dc81a9eae25077dc484
+    pristine_git_object: 145191f48336b804776baac6b34c230dcd6b7e97
+  docs/models/operations/tagids.md:
+    id: 074dbc116853
+    last_write_checksum: sha1:f0505c885a5bf9ec4a398db8c78daece912c0c38
+    pristine_git_object: b9f25111d43472574f8b0fc9081a78f651e2fb42
+  docs/models/operations/tagnames.md:
+    id: 664353f587d6
+    last_write_checksum: sha1:2e613768db6d266ebbd313b4230c6919231cb526
+    pristine_git_object: 87916ce6e97fb7bc5662367080ef23c01ba2dfc5
+  docs/models/operations/trackleadrequestbody.md:
+    id: ffe9e3508ff4
+    last_write_checksum: sha1:bf676ed14b633c5de3274f22bc60344e7b5be12d
+    pristine_git_object: 633df299f91943c108188f3f76ffacc9954fe3ee
+  docs/models/operations/trackleadresponsebody.md:
+    id: 2262a7bb8dc9
+    last_write_checksum: sha1:bbffc6ea93310258bdfea7b89fe9e0f3516c733a
+    pristine_git_object: 7b67894f5384ec2ba7b3f72745dd6a1c751e513c
+  docs/models/operations/tracksalecustomer.md:
+    id: "599194792377"
+    last_write_checksum: sha1:ea26c1a6d6976e55d267f3ad99091e9334b43a85
+    pristine_git_object: ba580abf872a310f5686ac7be82000fdb4f9788a
+  docs/models/operations/tracksalerequestbody.md:
+    id: c15f0d8ee4db
+    last_write_checksum: sha1:febe78b39cc1b322ec4a82bbdbfcfca8496aae18
+    pristine_git_object: 76d069b25c35ef234699f24e6a04299691dc8aea
+  docs/models/operations/tracksaleresponsebody.md:
+    id: 1b0119eddf5d
+    last_write_checksum: sha1:4caf2f54177737ea1c99b2f5feac5935fc076115
+    pristine_git_object: 61e8a5c50f04246faa24e74844625dca72c20ad7
+  docs/models/operations/trigger.md:
+    id: 6a78bf0b7512
+    last_write_checksum: sha1:69791ae799f9d9f9269bfe6dd15298c00a77b517
+    pristine_git_object: cad3aec8f5571ac4bf0542db554717015579f5b6
+  docs/models/operations/upsertlinkcolor.md:
+    id: 8ff76d991e54
+    last_write_checksum: sha1:525689fc85997e17da486106b263d5208561ee24
+    pristine_git_object: 74130f3e00ca4370e5ef308de52b547b98858df5
+  docs/models/operations/upsertlinklink.md:
+    id: a95b1885d563
+    last_write_checksum: sha1:18809641b86aa277fcdc59c005ab77705d6c9376
+    pristine_git_object: 7c97f17d9e7892a8754b814e2617ef48bc5c9837
+  docs/models/operations/upsertlinkrequestbody.md:
+    id: 0d76e93e8c6f
+    last_write_checksum: sha1:bd837d26b1bce6e7ea16c20ca338685bcd15ff8c
+    pristine_git_object: 2dd7013b64377371e57c29d4be379491d4317bf7
+  docs/models/operations/upsertlinktag.md:
+    id: 40511550426a
+    last_write_checksum: sha1:603e7a8951d1eb86d628dc667c43a09bbff4c2c8
+    pristine_git_object: cc22803a4f561a910a8c07da746131a2c879e1b2
+  docs/models/operations/upsertlinktagids.md:
+    id: 1847163c7243
+    last_write_checksum: sha1:205ea60eb311c1c16348b7b02ffe7a66296fb880
+    pristine_git_object: b7c22ab85b4d76076c2812297ea6a22f5c1b4fa4
+  docs/models/operations/upsertlinktagnames.md:
+    id: 7ec05f8ae7fc
+    last_write_checksum: sha1:bae45444129fde05c5bf2f8ef466a6f31594c0d7
+    pristine_git_object: 447ea9069841d179ec4dc06cdecacc189fdb4530
+  docs/sdks/analytics/README.md:
+    id: 4c84abb05030
+    last_write_checksum: sha1:b9aaa998e96dca7bfdc43e840a789208e1212eaf
+    pristine_git_object: 3bd1d774b3609be50499b1ea824e7df172167997
+  docs/sdks/links/README.md:
+    id: 8c355a557e3e
+    last_write_checksum: sha1:f0c6d5a188ac7940a7d71f0b45282d27305f51fa
+    pristine_git_object: 40b028bc47fa80d36d7d2581b92501e824d7f7c7
+  docs/sdks/qrcodes/README.md:
+    id: 87ad3800d686
+    last_write_checksum: sha1:28ee09d63022f70ed0897f487c8dbef68b4ea1ef
+    pristine_git_object: 3bd73686c9c5f71aabce70e5f3bf1028eddc3ba4
+  docs/sdks/track/README.md:
+    id: fc47e5604ee6
+    last_write_checksum: sha1:a52c118da55052bac4093a9ac6e56c94f0bff24c
+    pristine_git_object: edc9e7151a1a7c0222a63019ba793eb26b3e1c3f
+  eslint.config.mjs:
+    id: 461c8d07f6da
+    last_write_checksum: sha1:9398f326377fe47f67af2df6eb6370750c0790b4
+    pristine_git_object: 67bccfec985be20a00970d90155752832dd47135
+  examples/.env.template:
+    id: 52cbe5afed92
+    last_write_checksum: sha1:051c05905934faab45cf99c17a5581ebc19e3bce
+    pristine_git_object: fffb89e3b48ffce9ddc177f0f83184557443412d
+  examples/README.md:
+    id: 9d0f69d6e677
+    last_write_checksum: sha1:182054738540a680151b9248287d1e1c20fbbbb5
+    pristine_git_object: 48c0c9f3fcc314ec1a81297f9d17c996be91406b
+  examples/linksCreate.example.ts:
+    id: 6d49e237b56e
+    last_write_checksum: sha1:8133dfe7980668f8d27dc16a1d68dd95bfdfcf94
+    pristine_git_object: 9db3ddd12ecf7c1c0e70c858d53246aaa2af34ae
+  examples/package.json:
+    id: c1d7b0ec8e7e
+    last_write_checksum: sha1:cc21cbebccb0809e0a8fdf4c34ae188416f357bb
+    pristine_git_object: 7eae1cc5df65d890753bc7c8188a9c76b301ca0a
+  jsr.json:
+    id: 7f6ab7767282
+    last_write_checksum: sha1:b78da605d9d1efbee6bf4547c1f18c94be33b15c
+    pristine_git_object: ac07d00474dcdba73f111845f94dd3e0c4ac0c34
+  package.json:
+    id: 7030d0b2f71b
+    last_write_checksum: sha1:41f584c4b3422be099f38ec5dfbfb7a3c2ef806f
+    pristine_git_object: a9718cbbce5e060e44c349e230375a9eedb9c3d9
+  src/core.ts:
+    id: f431fdbcd144
+    last_write_checksum: sha1:6d4288a9933d55e6a9e50b9938dc1af444a2b309
+    pristine_git_object: e52f0b63363b10df113f5d46eec11ff24381ff00
+  src/funcs/analyticsRetrieve.ts:
+    id: 28564cea424c
+    last_write_checksum: sha1:b14c6606ea07b22b92639aa3d2aabffcfbd79cb6
+    pristine_git_object: 69dc46a5e8e175aa08d4e6b9ab5694fe15f5b6f3
+  src/funcs/linksCreate.ts:
+    id: 1385f8f83c4a
+    last_write_checksum: sha1:393e936969b18d4c7c5e90f9c9e2a23d66d86ede
+    pristine_git_object: 9eb3f659b59ebf19aff1b327f90ad9e58d1fbffe
+  src/funcs/linksUpsert.ts:
+    id: 4690d6c5aa29
+    last_write_checksum: sha1:833f083c932c4b1da6a84a8879a8d7f368197072
+    pristine_git_object: c58a2b6656aee376fd703c9580ccd6bf72061ad5
+  src/funcs/qrCodesGet.ts:
+    id: 4d0585ab0c1f
+    last_write_checksum: sha1:3d2951343cb866ffc839d490774b0108b61c2fb5
+    pristine_git_object: 374c8184ca63dc7dfd358698b72d616a82af08b2
+  src/funcs/trackLead.ts:
+    id: 175e4bd06140
+    last_write_checksum: sha1:fa3441fac7b37b07982fa1548d4d02b10f73adcb
+    pristine_git_object: e6bfd261176c86c18c596907cd91b4e439dbbde2
+  src/funcs/trackSale.ts:
+    id: 6f53263ffd38
+    last_write_checksum: sha1:3b67fe5bb97fc82ec1899d9e0606aaf09d1dfaf0
+    pristine_git_object: 0b3594ab09522509744f88ec21ebc956076755c1
+  src/hooks/hooks.ts:
+    id: a2463fc6f69b
+    last_write_checksum: sha1:646c1538dbffb2552af9d7516de64c339b5e96c2
+    pristine_git_object: fc9b13b25900a363b2123d2bad90f541e1d5d176
+  src/hooks/index.ts:
+    id: 5f2dab62b520
+    last_write_checksum: sha1:1a11c073a6cd792932218e1d4ed36b8567bad8ef
+    pristine_git_object: f60ec7acd76141a71d78008c5a362eb0236d8335
+  src/hooks/types.ts:
+    id: 2a02d86ec24f
+    last_write_checksum: sha1:29372122898cc523fa47576f3f6608a28ec6080e
+    pristine_git_object: 8bfe4fe8137138decea7af0a5ed791bf01201789
+  src/index.ts:
+    id: c5fb850250c7
+    last_write_checksum: sha1:35c9cde3ae14b18b3f893a1afe8b6c44f8760f24
+    pristine_git_object: dbcba164a0082e3bb8c43cf21fa7f8ffb9d35dfc
+  src/lib/base64.ts:
+    id: "598522066688"
+    last_write_checksum: sha1:b0b12ddbd8625efb47c0e955a18641aeb10c6532
+    pristine_git_object: 0aebd8b0a4867e35cb3348fc52921c3c0b4725b7
+  src/lib/config.ts:
+    id: 320761608fb3
+    last_write_checksum: sha1:79bdd0a91677568d341af27682045f28ff57490e
+    pristine_git_object: e6b860f37280f404839aa7e067fd7ad5abeee1b6
+  src/lib/dlv.ts:
+    id: b1988214835a
+    last_write_checksum: sha1:1dd3e3fbb4550c4bf31f5ef997faff355d6f3250
+    pristine_git_object: e81091f5e536f82739f71379b1fddc2d147c49e2
+  src/lib/encodings.ts:
+    id: 3bd8ead98afd
+    last_write_checksum: sha1:14a1c57947f58b6851f480ab87aef14def989fa0
+    pristine_git_object: d21ccfedbfd9f8460372edcf9b65273612aaa955
+  src/lib/env.ts:
+    id: c52972a3b198
+    last_write_checksum: sha1:e827f8881473d38c95f924f666e87d6f9f92fab5
+    pristine_git_object: 42b486bf764a0522d6215d5eb49d68babb22bec9
+  src/lib/files.ts:
+    id: e5efa54fcb95
+    last_write_checksum: sha1:795c14026405d547bfc47012f7ad9666e530fa7f
+    pristine_git_object: 6ca6b37d35a12448da176ee2517cc036db12c81c
+  src/lib/http.ts:
+    id: 63a80782d37e
+    last_write_checksum: sha1:797cbf16d3c7c4d62d3ba0eedb08617524938457
+    pristine_git_object: 13cf1fd7894a89f727b8d2db2ad24313a94f68c7
+  src/lib/is-plain-object.ts:
+    id: b9862591096a
+    last_write_checksum: sha1:df687f25a9590b6fd95d39df41a652ae3fd4e517
+    pristine_git_object: 61070d3d7c7e5e95b1ed7e7ea21869eb0767db77
+  src/lib/logger.ts:
+    id: 7ee7741a02bf
+    last_write_checksum: sha1:0ec9d3a2a34c362746b767e4f9a746c055d57a7b
+    pristine_git_object: d181f2937d4128afbe9b0327e0f81d1fa9c877b7
+  src/lib/matchers.ts:
+    id: d54b2253b719
+    last_write_checksum: sha1:32bda3887292d2b0430bb6688982e34038342919
+    pristine_git_object: b7ef1986eaa94795a3b1a7409e8aeed6591a11e6
+  src/lib/primitives.ts:
+    id: 74859f750b28
+    last_write_checksum: sha1:987869fc54790b9c22e9182099103d6aa7c67016
+    pristine_git_object: d21f1dc49affa4e6d324bdd60811b470fdfa7eb6
+  src/lib/retries.ts:
+    id: b24a69d15639
+    last_write_checksum: sha1:f3da74dffcbe2756c69393f8600205aa1dc06e68
+    pristine_git_object: e3ce9aba72150fc3c18f3105d39b21aba809377b
+  src/lib/schemas.ts:
+    id: deb4b531fae1
+    last_write_checksum: sha1:209cfaabfa7fc1c1310f97453215cb0755619c6e
+    pristine_git_object: 47edb9725c2482c667e2ddc8a56b1fec4285c492
+  src/lib/sdks.ts:
+    id: 8a6d91f1218d
+    last_write_checksum: sha1:30b5067be08eff188bb790fbf925265b05d85407
+    pristine_git_object: 0a55d6d67de7558d5999a804e925d6b25e952765
+  src/lib/security.ts:
+    id: 0502afa7922e
+    last_write_checksum: sha1:13f678f875956d4be5d352836218708043ba7e0b
+    pristine_git_object: 5182750e24dcb384cd26b4e5513c1e2d20109932
+  src/lib/url.ts:
+    id: b0057e24ed76
+    last_write_checksum: sha1:3bceadd74bf0b31adf13eb06b7531077c3e07d65
+    pristine_git_object: 79e7ce660b3732053e3adcbb5a4cdeb51496e8aa
+  src/mcp-server/build.mts:
+    id: f7a2ed2de4d7
+    last_write_checksum: sha1:1a7a5dc9ace5a5d707bd8d2339f76719e525e7eb
+    pristine_git_object: a04739f2ac2154c097ea821daf364ee4c037a820
+  src/mcp-server/cli.ts:
+    id: 4ade0ef98b00
+    last_write_checksum: sha1:7331efddde881832342fa8779d23be7445d4480c
+    pristine_git_object: b878d8de9f2a0275c3cdbfdcaed48a31092e558a
+  src/mcp-server/cli/start/command.ts:
+    id: b3e53408ccb4
+    last_write_checksum: sha1:ae13f23b10c093f30909935c2b6b0c08b276d7d1
+    pristine_git_object: 4d52e87413db9a1319c090b731569a314143c0db
+  src/mcp-server/cli/start/impl.ts:
+    id: 37494f674015
+    last_write_checksum: sha1:d0b0ea15c26c0eafe7af333d37c0a075f8bdbef2
+    pristine_git_object: f18394b67190a706cae10b51cfef1d7fed294378
+  src/mcp-server/console-logger.ts:
+    id: 57aff4ff2e15
+    last_write_checksum: sha1:66e945860c8318f2a6bb9604a7720a979dacce4b
+    pristine_git_object: d65a295b9545bee0599e46f2a75f2ab5a03c4ae4
+  src/mcp-server/extensions.ts:
+    id: 3d9d20ff158f
+    last_write_checksum: sha1:e36e4b49b77347db80debccc2e77706b0ac7f4a4
+    pristine_git_object: 0955a573c2ce989d63c737410ab8cc28706d9f74
+  src/mcp-server/mcp-server.ts:
+    id: aabbc4ab07c1
+    last_write_checksum: sha1:68fbd17e30e28f606d53c3c5778b0aa7d39b192a
+    pristine_git_object: d8eee5c23797ddf470e1f290db5e1e62405b815e
+  src/mcp-server/prompts.ts:
+    id: 26f3d73cbf31
+    last_write_checksum: sha1:389c04c4cb7f610e06307be5ca0d23102722116e
+    pristine_git_object: b86deb9db7d2c33c6585f356940dc444b0ed66ca
+  src/mcp-server/resources.ts:
+    id: cb0c57ebeaea
+    last_write_checksum: sha1:390aff9304765621327babc68a14c5ca97cd338c
+    pristine_git_object: 4ea5ac94e69f745ae825bae25ff5953f68770b08
+  src/mcp-server/scopes.ts:
+    id: 8966d24256b2
+    last_write_checksum: sha1:77d0eb95785e84f9fd0b27c4612f8c6470489fe4
+    pristine_git_object: c25696d4c4f70e081fa5d87ad6891874c509a577
+  src/mcp-server/server.ts:
+    id: 2784dd48e82a
+    last_write_checksum: sha1:c534166c3b13a07d455cb246d24e98c664b3c4ae
+    pristine_git_object: a8dc603ca3321e32ed4fe1fe4df980f7c749be6a
+  src/mcp-server/shared.ts:
+    id: 074e80d4be1e
+    last_write_checksum: sha1:d89576cea2bef3856b7fc3e65b868875528be042
+    pristine_git_object: bef212f002cac28cb23333a5f291a4ee5ba08521
+  src/mcp-server/tools.ts:
+    id: 654d5d1f2062
+    last_write_checksum: sha1:320c5ed876f3e9344fecf799943af56a19f92a74
+    pristine_git_object: 3a82cbf96ee537cc291cada7771c774d4b96184f
+  src/mcp-server/tools/analyticsRetrieve.ts:
+    id: 29d4b5a2b984
+    last_write_checksum: sha1:62bfc05c1e2b57d502bf599cd63723e09464deca
+    pristine_git_object: f211a8d1d94e75bd9e96fc5393f0bd31091e4e5e
+  src/mcp-server/tools/linksCreate.ts:
+    id: 23a80280eb1f
+    last_write_checksum: sha1:432ee70d42be940d86cfaa6e8a9d4aed410dc360
+    pristine_git_object: 79430d26027da01d06652881909545bf5e60fd3d
+  src/mcp-server/tools/linksUpsert.ts:
+    id: d969f9c7b6a7
+    last_write_checksum: sha1:2ac3a867a31dabe776324c6852a461ca4833b6bb
+    pristine_git_object: dc3e506365516b891b3a86d98afe2b8bc22f76b7
+  src/mcp-server/tools/qrCodesGet.ts:
+    id: 6d3f9237d488
+    last_write_checksum: sha1:69f1ff07fa5f2031b7e3217e8a96db40b7c71392
+    pristine_git_object: fb37329ab5de966d32c6eba339659c03bb8cec69
+  src/mcp-server/tools/trackLead.ts:
+    id: c7b06e07e770
+    last_write_checksum: sha1:98e7ad7af96f17e1fafcd0ead14e3381407abc2f
+    pristine_git_object: 0b6aff4695be4f27db5a42447e66ff37065151d7
+  src/mcp-server/tools/trackSale.ts:
+    id: fb71fc35f390
+    last_write_checksum: sha1:20696222cc6d7de0faac51e5411dae925389bbd9
+    pristine_git_object: 3738773214d4d65ecb72acdb3b86cf818cafeaa1
+  src/models/components/analyticsbrowsers.ts:
+    id: c5dfbaa601bf
+    last_write_checksum: sha1:32d1b8ce29720cb0d0852e75dc23f19e55624def
+    pristine_git_object: 20a42e00c3b91a1980126c8d36f1b03ffd019637
+  src/models/components/analyticscities.ts:
+    id: f2435cc9480c
+    last_write_checksum: sha1:945d538db54f676794a47d9d14e64438858bc31f
+    pristine_git_object: 3cc8279761c6d5fff32d103242be564a61c3acde
+  src/models/components/analyticscontinents.ts:
+    id: a1f079c3e05c
+    last_write_checksum: sha1:965a79f81c40e8bc4c6acb9c5c66efcdbe494e34
+    pristine_git_object: 219c1d52bf1cfdce07dcddd9e6d2a5e8b4830ca3
+  src/models/components/analyticscount.ts:
+    id: 0afaa4667392
+    last_write_checksum: sha1:32ffc4cd646f9f70c27a446e42041c216df79ebc
+    pristine_git_object: d6ab8cb59f7161b945f49ccf79a2c5d8da7c0c43
+  src/models/components/analyticscountries.ts:
+    id: 3590b05392b6
+    last_write_checksum: sha1:a1e198e5275ec31f5db7168678140b623db2cdb2
+    pristine_git_object: ba2afdb139d4657c6749754b313de74e59533067
+  src/models/components/analyticsdevices.ts:
+    id: 47dd7f803576
+    last_write_checksum: sha1:e7be2d8d3d37981def3d91313b4447d024789fc2
+    pristine_git_object: 3ad0e6d5b7ce7a0fffc867690f63ef043f22ca55
+  src/models/components/analyticsos.ts:
+    id: ef39f55f2ca6
+    last_write_checksum: sha1:6f70e078bc17b05ce3e8685ef318a7f3002e8e23
+    pristine_git_object: e64f9fbcc0b8036b4f6dc9f6969df7fc6c2d74cf
+  src/models/components/analyticsreferers.ts:
+    id: f4182afeb757
+    last_write_checksum: sha1:93efc768f84e98f4b5e261da88169cba579a8b45
+    pristine_git_object: 65d68b6f143c16d5f8513fe634387d0b2cc4d0f1
+  src/models/components/analyticsrefererurls.ts:
+    id: 46ee13b72258
+    last_write_checksum: sha1:e4f4e13954b5833c33d503a5952ad4ec8cae7bc6
+    pristine_git_object: e2d6bb945df99768281cc916b94ca6af41a99539
+  src/models/components/analyticsregions.ts:
+    id: 411556f35d01
+    last_write_checksum: sha1:4ae3352eea8bb0bd9b2cee6012a5f657fe7acd50
+    pristine_git_object: 6598d04d070cbe7f46582a3999ebcfd74cf4fed1
+  src/models/components/analyticstimeseries.ts:
+    id: 2396ccff167a
+    last_write_checksum: sha1:606f08738ac470ab078628ece47cc348679d42f9
+    pristine_git_object: 8798390b85235aabb3af0ead1ec04cc20a74acfe
+  src/models/components/analyticstoplinks.ts:
+    id: f5d18e141b3e
+    last_write_checksum: sha1:078f42d39c81975abf276bd1867df286a4237ce4
+    pristine_git_object: 4186135986a6646cd77dfb476c1bff1aa0b88967
+  src/models/components/analyticstopurls.ts:
+    id: 5b89281b02de
+    last_write_checksum: sha1:fad41b30518fec01904568022bc918459673f5ab
+    pristine_git_object: 7257eff07d057759e48b1992c272877d81a52c1f
+  src/models/components/analyticstriggers.ts:
+    id: f73cb12213f7
+    last_write_checksum: sha1:e2409ad97ccf3fe693c00f0e7827cba7e1af61c4
+    pristine_git_object: 94cd26821f0eb6c88a3ba7c8e5f29905185f24fd
+  src/models/components/continentcode.ts:
+    id: 41b18eda9689
+    last_write_checksum: sha1:03f82e5cfec36ad38bf829b668030f82782bb549
+    pristine_git_object: a7591cb5c502440d0e94a4f02f3068bf8ceb49ed
+  src/models/components/countrycode.ts:
+    id: 6dd155eb8e05
+    last_write_checksum: sha1:cbb436639f591ef74e754a38d27b4fe126f2ab77
+    pristine_git_object: bc4c0d3a4f9ec7419e60d964e956b2ea8ee072d2
+  src/models/components/index.ts:
+    id: 0aa842dce54d
+    last_write_checksum: sha1:1c46f863309d0efecb15e1d9f1de26a163f5fdf9
+    pristine_git_object: c3a8471b31fc94e41c089167985ff7b3312791dc
+  src/models/components/security.ts:
+    id: 472dde81bb1c
+    last_write_checksum: sha1:b159312a76def730236c6cfa2c1a1d00fd3674de
+    pristine_git_object: e2e0446e5dd2e0a5a21f233383ad227fd64e43cb
+  src/models/errors/apierror.ts:
+    id: e2280e075454
+    last_write_checksum: sha1:891956529f6f76a0ab39d3e0ed6beb0207c56882
+    pristine_git_object: b3f2ae476350d8bed7fc34fe1b3446af7bc41230
+  src/models/errors/badrequest.ts:
+    id: 6043c84e11c4
+    last_write_checksum: sha1:78662fe958fb44348091f237089270b864775c3d
+    pristine_git_object: 8de17d0bcdc7796a3454ddc2355f41bb9c2b76a7
+  src/models/errors/conflict.ts:
+    id: f7d0beb7f702
+    last_write_checksum: sha1:1b6e8c3e1c3127bc6a0f957206c4b58741f3c5eb
+    pristine_git_object: 1500215adade73c8c8b48ce431ea5bbef2568e9a
+  src/models/errors/forbidden.ts:
+    id: 14ee2a52f7b8
+    last_write_checksum: sha1:a33b33dc9e39743ead20b5dc249e9499e572feb3
+    pristine_git_object: 40041212b9b98eda1fb605d7e3d72f832b857905
+  src/models/errors/httpclienterrors.ts:
+    id: 6948de76af99
+    last_write_checksum: sha1:994ced121c54fecd0af038ccfb7855fbfd3868ec
+    pristine_git_object: b34f612124c797c2a1106b9735708f679a90b74f
+  src/models/errors/index.ts:
+    id: c4e22507cb83
+    last_write_checksum: sha1:43e399ea4c67f756617d34c0bd7a483b98a2b61f
+    pristine_git_object: 380165537f9246316e701aedb3a04be3aec995df
+  src/models/errors/internalservererror.ts:
+    id: 7480894d7180
+    last_write_checksum: sha1:1be7c52884bf26f13f4c7dfb26397ba9c9ef0d93
+    pristine_git_object: eae4182d6511e603a15f79f15f344ccee1bd46c9
+  src/models/errors/inviteexpired.ts:
+    id: 072fcb15cc95
+    last_write_checksum: sha1:b3696f803f8f1d8560c5e940d6a41ef191b406cb
+    pristine_git_object: 930c0f2f8de7b241f74e95402d4571bb5a59690b
+  src/models/errors/notfound.ts:
+    id: c803091c41f8
+    last_write_checksum: sha1:571edd1d3651d381c0f1eec67c474c3a02be4257
+    pristine_git_object: 76174efdce145aedc7ea3b46c006a05252783f52
+  src/models/errors/pimmserror.ts:
+    id: 9351dc233d40
+    last_write_checksum: sha1:fe048e31a520424f934b54cce7b6b0cb6b5a7974
+    pristine_git_object: 1570f81b41601e204556bc7a54162def55a368b9
+  src/models/errors/ratelimitexceeded.ts:
+    id: 4c5e670bcad6
+    last_write_checksum: sha1:d3a504f973b445891578bf6488d68d3d7f6b7c2c
+    pristine_git_object: 52cd89ccc334906f52a6de910fc44e6eb138bf38
+  src/models/errors/responsevalidationerror.ts:
+    id: 88ff98a41be9
+    last_write_checksum: sha1:326f648d980c962779582ae611588110a5f4e530
+    pristine_git_object: 1395510cb1fdf3f36ee8e826724ee8bc67b3e507
+  src/models/errors/sdkvalidationerror.ts:
+    id: fb6b2b49c445
+    last_write_checksum: sha1:a69da17627bcc32b820544608f3400423ea53f26
+    pristine_git_object: 6826e1208a5d7b7d310535d18909646522bf0fbd
+  src/models/errors/unauthorized.ts:
+    id: 080905fc3240
+    last_write_checksum: sha1:da614f5cc9277196dddd7b81fdb2d9402dc30b0e
+    pristine_git_object: 489db1b4ba61e57f3813dcb271d9c2b72ab86c52
+  src/models/errors/unprocessableentity.ts:
+    id: 7cc32af32b2b
+    last_write_checksum: sha1:0c7e4d1699e73a3c9cb5da21a4ad567ce9471323
+    pristine_git_object: 705507cf585453fcdb919db2a7e6aefbc13e2db1
+  src/models/operations/createlink.ts:
+    id: 5bbf4bc40bf4
+    last_write_checksum: sha1:9eb81bbe240f2183b68cb35ece750fb80b839309
+    pristine_git_object: 35bd5aa5229484085d411b89893b7ff3b049f67c
+  src/models/operations/getqrcode.ts:
+    id: 44d05f57c500
+    last_write_checksum: sha1:e67a92966d5582d91ef867a79f95d1dda531dac3
+    pristine_git_object: bb8a7fdfcd7c2430ed1fec6ba1ba766836ab08bc
+  src/models/operations/index.ts:
+    id: 0d9ffaf774d2
+    last_write_checksum: sha1:f5cbe921799dddf526fd2bc45786ac8ae4943d88
+    pristine_git_object: 14d0d030ce9ccf731bd409f30bdafbf9ba58f602
+  src/models/operations/retrieveanalytics.ts:
+    id: 8d052c2ff7d7
+    last_write_checksum: sha1:9dd540ac7d2c14e72955cfa9c0938a76a40d2b52
+    pristine_git_object: 8616274e62e51f9ec3c8899636bf63667bf6e278
+  src/models/operations/tracklead.ts:
+    id: dcd8df0659a2
+    last_write_checksum: sha1:26c4483c5e328f45f224dd5edfcf377e5d09377a
+    pristine_git_object: 2ce405380f399059d1073f73c2ee816fa126b450
+  src/models/operations/tracksale.ts:
+    id: d2737ce00002
+    last_write_checksum: sha1:9a07180250c14c319782f405aa2a865ef23b7593
+    pristine_git_object: 77732498291f49a54947bfe1af2d23ee59800889
+  src/models/operations/upsertlink.ts:
+    id: e01c8f4ba54c
+    last_write_checksum: sha1:e22570d1b6e21dad1e85c0097f27e1deee888491
+    pristine_git_object: b34538a14ee079937ed7411023e7b7d2e8d2aac0
+  src/sdk/analytics.ts:
+    id: 411d91261be3
+    last_write_checksum: sha1:d176f77d26ecd8aa826550987b2c5ea9ee05e6c0
+    pristine_git_object: 59b0b1e6e320e8710216653627e98df8927c0070
+  src/sdk/index.ts:
+    id: a857902a703f
+    last_write_checksum: sha1:ed6d64f2a6135349aa8498b8d8cff9ba85c7fb8f
+    pristine_git_object: ecac2264817bb369ff2dbf0f0e9029807e67ff77
+  src/sdk/links.ts:
+    id: 2e1e87130184
+    last_write_checksum: sha1:a087bee064c64e647ad0472b3a5679dfb6bd2689
+    pristine_git_object: fd504da381a825e4d60f931c16e299eb9d2f78c7
+  src/sdk/qrcodes.ts:
+    id: caa7082ad5e8
+    last_write_checksum: sha1:81aba04e72018c6081d6c9d72e7f071694a25a07
+    pristine_git_object: 93f21781c73af860c055248591443ef742afe417
+  src/sdk/sdk.ts:
+    id: 784571af2f69
+    last_write_checksum: sha1:b0006d8601141a892dc72c6c8b19ab8b00fcfee8
+    pristine_git_object: 1962593bdc536b53c1c7c58a6c84235408fe3f12
+  src/sdk/track.ts:
+    id: e523e75cdc10
+    last_write_checksum: sha1:a55113cca4316fa6e1f4539931cca61179b7225a
+    pristine_git_object: cd1fbd9ed54ff7b4f6f7e6d9eb3ce4fe30cb69fb
+  src/types/async.ts:
+    id: fac8da972f86
+    last_write_checksum: sha1:3ff07b3feaf390ec1aeb18ff938e139c6c4a9585
+    pristine_git_object: 689dba5de50e8769e5f3bb913e3f42a146d15bc1
+  src/types/blobs.ts:
+    id: f8ab9b326c86
+    last_write_checksum: sha1:cf45d78916671cb6345a11c97c633c64402bc27c
+    pristine_git_object: cce2892d4f573a120ef3907db90ab15f5979cfda
+  src/types/constdatetime.ts:
+    id: 0f7b6f513917
+    last_write_checksum: sha1:dfaaf9adfaf49808bd4c9dea0039f21b7088d9c0
+    pristine_git_object: fe62144eaf6a2054fc8ca9a98466e70f41b5434d
+  src/types/enums.ts:
+    id: 4d03ddfe5100
+    last_write_checksum: sha1:ee590453d2c87e33e89c633d37ee46907eca0e58
+    pristine_git_object: aba0ffd2a3308a31e516d83b52823d80aa65a8f9
+  src/types/fp.ts:
+    id: ae9f0fb8aab6
+    last_write_checksum: sha1:d24994d58f37a1ca106847fcc6d2e976c6f1c093
+    pristine_git_object: ccbe51eac69dfb0da5131f14fd753c4b47c1d527
+  src/types/index.ts:
+    id: cd7a0a5ed005
+    last_write_checksum: sha1:bf43b3dccb960ca9ae9c5ab940da4786255881cd
+    pristine_git_object: abf0b7ab8f196829df8946da40d627a46da68e3c
+  src/types/operations.ts:
+    id: 314da01dca47
+    last_write_checksum: sha1:c49e724cfb1259296381cb57bc0fcdd2eae45865
+    pristine_git_object: beb81e10f0b9eee2ed398a853fe6f737b743f818
+  src/types/rfcdate.ts:
+    id: 9eb64906dcd6
+    last_write_checksum: sha1:8e5f382e02fe21c2f2e24deb1b7bbf8cddd3dd16
+    pristine_git_object: c79b3f53a3dd922aa2ace5a4191c8652cf9a8e89
+  src/types/streams.ts:
+    id: f99be9c4bf14
+    last_write_checksum: sha1:cc9ced2dd34a76c3a1bd7784ccda1cc3b37ab9a9
+    pristine_git_object: a0163e7a99cea88f21d0ad4ce3af1c720180ee20
+  src/types/unrecognized.ts:
+    id: 476605c40716
+    last_write_checksum: sha1:d33ac686528492f4cdc0dbf81ed343b4afe020fe
+    pristine_git_object: b7a2a13f3dff50663429df24ae2f55b647ff1084
+  tsconfig.json:
+    id: 61ebb9fd6e8c
+    last_write_checksum: sha1:79dc1550d921fefec69f8632ed3b24dad41ca2f6
+    pristine_git_object: 76110f883cac40bb04fb2f376cd69ea8c8d6d215
+examples:
+  createLink:
+    speakeasy-default-create-link:
+      requestBody:
+        application/json: {"url": "https://pimms.io", "externalId": "123456", "tagIds": ["clux0rgak00011..."]}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "domain": "graceful-moment.info", "key": "<key>", "url": "https://polite-daddy.name/", "trackConversion": false, "archived": false, "expiresAt": "1740654751181", "title": "<value>", "description": "clamp light case", "image": "https://loremflickr.com/2796/1386?lock=7843684715936009", "video": "https://loremflickr.com/2488/1524?lock=4074143183622526", "ios": null, "android": "<id>", "tags": [], "webhookIds": ["<value 1>", "<value 2>"], "comments": "handy larva past fixed however underneath which rundown er lest underneath", "shortLink": "https://forceful-bell.biz", "qrCode": "https://victorious-humidity.com", "utm_source": "<value>", "utm_medium": "<value>", "utm_campaign": "<value>", "utm_term": "<value>", "utm_content": "<value>", "userId": null, "workspaceId": "<id>", "clicks": 0, "lastClicked": "<value>", "leads": 0, "createdAt": "1705717268004", "updatedAt": "1735649494286"}
+        "400":
+          application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
+        "401":
+          application/json: {"error": {"code": "unauthorized", "message": "The requested resource was not found."}}
+        "403":
+          application/json: {"error": {"code": "forbidden", "message": "The requested resource was not found."}}
+        "404":
+          application/json: {"error": {"code": "not_found", "message": "The requested resource was not found."}}
+        "409":
+          application/json: {"error": {"code": "conflict", "message": "The requested resource was not found."}}
+        "410":
+          application/json: {"error": {"code": "invite_expired", "message": "The requested resource was not found."}}
+        "422":
+          application/json: {"error": {"code": "unprocessable_entity", "message": "The requested resource was not found."}}
+        "429":
+          application/json: {"error": {"code": "rate_limit_exceeded", "message": "The requested resource was not found."}}
+        "500":
+          application/json: {"error": {"code": "internal_server_error", "message": "The requested resource was not found."}}
+  upsertLink:
+    speakeasy-default-upsert-link:
+      requestBody:
+        application/json: {"url": "https://pimms.io", "externalId": "123456", "tagIds": ["clux0rgak00011..."]}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "domain": "rural-behest.net", "key": "<key>", "url": "https://odd-brush.net", "trackConversion": false, "archived": false, "expiresAt": "1745789614345", "title": "<value>", "description": "queasily circa hunger ew both censor draft ack bob large", "image": "https://loremflickr.com/426/2724?lock=8228538483422329", "video": "https://picsum.videos/seed/IoF8Ht/1263/2672", "ios": "<value>", "android": "<id>", "tags": [], "webhookIds": ["<value 1>"], "comments": "fooey disconnection intent sediment ha compassionate vice extremely blind overcooked cross", "shortLink": "https://necessary-hose.net/", "qrCode": "https://warmhearted-deployment.org", "utm_source": "<value>", "utm_medium": "<value>", "utm_campaign": "<value>", "utm_term": "<value>", "utm_content": "<value>", "userId": "<id>", "workspaceId": "<id>", "clicks": 0, "lastClicked": "<value>", "leads": 0, "createdAt": "1710248288929", "updatedAt": "1735678066410"}
+        "400":
+          application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
+        "401":
+          application/json: {"error": {"code": "unauthorized", "message": "The requested resource was not found."}}
+        "403":
+          application/json: {"error": {"code": "forbidden", "message": "The requested resource was not found."}}
+        "404":
+          application/json: {"error": {"code": "not_found", "message": "The requested resource was not found."}}
+        "409":
+          application/json: {"error": {"code": "conflict", "message": "The requested resource was not found."}}
+        "410":
+          application/json: {"error": {"code": "invite_expired", "message": "The requested resource was not found."}}
+        "422":
+          application/json: {"error": {"code": "unprocessable_entity", "message": "The requested resource was not found."}}
+        "429":
+          application/json: {"error": {"code": "rate_limit_exceeded", "message": "The requested resource was not found."}}
+        "500":
+          application/json: {"error": {"code": "internal_server_error", "message": "The requested resource was not found."}}
+  retrieveAnalytics:
+    speakeasy-default-retrieve-analytics:
+      parameters:
+        query:
+          event: "clicks"
+          groupBy: "count"
+          timezone: "America/New_York"
+          city: "New York"
+          device: "Desktop"
+          browser: "Chrome"
+          os: "Windows"
+          refererUrl: "https://pimms.io/blog"
+      responses:
+        "200":
+          application/json: []
+        "400":
+          application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
+        "401":
+          application/json: {"error": {"code": "unauthorized", "message": "The requested resource was not found."}}
+        "403":
+          application/json: {"error": {"code": "forbidden", "message": "The requested resource was not found."}}
+        "404":
+          application/json: {"error": {"code": "not_found", "message": "The requested resource was not found."}}
+        "409":
+          application/json: {"error": {"code": "conflict", "message": "The requested resource was not found."}}
+        "410":
+          application/json: {"error": {"code": "invite_expired", "message": "The requested resource was not found."}}
+        "422":
+          application/json: {"error": {"code": "unprocessable_entity", "message": "The requested resource was not found."}}
+        "429":
+          application/json: {"error": {"code": "rate_limit_exceeded", "message": "The requested resource was not found."}}
+        "500":
+          application/json: {"error": {"code": "internal_server_error", "message": "The requested resource was not found."}}
+  trackLead:
+    speakeasy-default-track-lead:
+      requestBody:
+        application/json: {"clickId": "<id>", "eventName": "Sign up", "externalId": "", "customerName": null, "customerEmail": null, "customerAvatar": null}
+      responses:
+        "200":
+          application/json: {"click": {"id": "<id>"}, "customer": {"name": "<value>", "email": "Emilie.Schaefer58@gmail.com", "avatar": "https://loremflickr.com/1842/262?lock=389315303878245", "externalId": "<id>"}}
+        "400":
+          application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
+        "401":
+          application/json: {"error": {"code": "unauthorized", "message": "The requested resource was not found."}}
+        "403":
+          application/json: {"error": {"code": "forbidden", "message": "The requested resource was not found."}}
+        "404":
+          application/json: {"error": {"code": "not_found", "message": "The requested resource was not found."}}
+        "409":
+          application/json: {"error": {"code": "conflict", "message": "The requested resource was not found."}}
+        "410":
+          application/json: {"error": {"code": "invite_expired", "message": "The requested resource was not found."}}
+        "422":
+          application/json: {"error": {"code": "unprocessable_entity", "message": "The requested resource was not found."}}
+        "429":
+          application/json: {"error": {"code": "rate_limit_exceeded", "message": "The requested resource was not found."}}
+        "500":
+          application/json: {"error": {"code": "internal_server_error", "message": "The requested resource was not found."}}
+  trackSale:
+    speakeasy-default-track-sale:
+      requestBody:
+        application/json: {"externalId": "", "amount": 594903, "paymentProcessor": "<value>", "eventName": "Purchase", "invoiceId": null, "currency": "usd"}
+      responses:
+        "200":
+          application/json: {"eventName": "<value>", "customer": {"id": "<id>", "name": "<value>", "email": "Garnett.Witting@gmail.com", "avatar": null, "externalId": null}, "sale": null}
+        "400":
+          application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
+        "401":
+          application/json: {"error": {"code": "unauthorized", "message": "The requested resource was not found."}}
+        "403":
+          application/json: {"error": {"code": "forbidden", "message": "The requested resource was not found."}}
+        "404":
+          application/json: {"error": {"code": "not_found", "message": "The requested resource was not found."}}
+        "409":
+          application/json: {"error": {"code": "conflict", "message": "The requested resource was not found."}}
+        "410":
+          application/json: {"error": {"code": "invite_expired", "message": "The requested resource was not found."}}
+        "422":
+          application/json: {"error": {"code": "unprocessable_entity", "message": "The requested resource was not found."}}
+        "429":
+          application/json: {"error": {"code": "rate_limit_exceeded", "message": "The requested resource was not found."}}
+        "500":
+          application/json: {"error": {"code": "internal_server_error", "message": "The requested resource was not found."}}
+  getQRCode:
+    speakeasy-default-get-QR-code:
+      parameters:
+        query:
+          url: "https://needy-newsstand.biz/"
+          size: 600
+          level: "L"
+          fgColor: "#000000"
+          bgColor: "#FFFFFF"
+          hideLogo: false
+          margin: 2
+          includeMargin: true
+      responses:
+        "200":
+          image/png: "<value>"
+        "400":
+          application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
+        "401":
+          application/json: {"error": {"code": "unauthorized", "message": "The requested resource was not found."}}
+        "403":
+          application/json: {"error": {"code": "forbidden", "message": "The requested resource was not found."}}
+        "404":
+          application/json: {"error": {"code": "not_found", "message": "The requested resource was not found."}}
+        "409":
+          application/json: {"error": {"code": "conflict", "message": "The requested resource was not found."}}
+        "410":
+          application/json: {"error": {"code": "invite_expired", "message": "The requested resource was not found."}}
+        "422":
+          application/json: {"error": {"code": "unprocessable_entity", "message": "The requested resource was not found."}}
+        "429":
+          application/json: {"error": {"code": "rate_limit_exceeded", "message": "The requested resource was not found."}}
+        "500":
+          application/json: {"error": {"code": "internal_server_error", "message": "The requested resource was not found."}}
+examplesVersion: 1.0.2
+generatedTests: {}
+releaseNotes: "## Typescript SDK Changes:\n* `pimms.analytics.retrieve()`:  `request` **Changed** (Breaking ⚠️)\n* `pimms.track.sale()`: \n  *  `request.paymentProcessor` **Changed** (Breaking ⚠️)\n* `pimms.embedTokens.referrals()`: **Removed** (Breaking ⚠️)\n"
 generatedFiles:
   - .devcontainer/README.md
   - .devcontainer/devcontainer.json
@@ -244,198 +1249,3 @@ generatedFiles:
   - src/types/rfcdate.ts
   - src/types/streams.ts
   - tsconfig.json
-examples:
-  createLink:
-    speakeasy-default-create-link:
-      requestBody:
-        application/json: {"url": "https://pimms.io", "externalId": "123456", "tagIds": ["clux0rgak00011..."]}
-      responses:
-        "200":
-          application/json: {"id": "<id>", "domain": "low-packaging.info", "key": "<key>", "url": "https://black-and-white-secrecy.org/", "trackConversion": false, "archived": false, "expiresAt": "1743808457787", "title": "<value>", "description": "fumigate convection though zowie", "image": "https://loremflickr.com/1809/1985?lock=7046932022822980", "video": "https://picsum.videos/seed/LdrqA5uuk/550/2814", "ios": "<value>", "android": "<id>", "tags": [{"id": "<id>", "name": "<value>", "color": "red"}, {"id": "<id>", "name": "<value>", "color": "red"}, {"id": "<id>", "name": "<value>", "color": "green"}], "webhookIds": ["<value>", "<value>"], "comments": "yuck forager beneath please shadowy foodstuffs welcome via deeply writ amid pupil yawningly", "shortLink": "https://charming-request.com/", "qrCode": "https://old-fashioned-wasabi.biz/", "utm_source": "<value>", "utm_medium": "<value>", "utm_campaign": "<value>", "utm_term": "<value>", "utm_content": "<value>", "userId": "<id>", "workspaceId": "<id>", "clicks": 0, "lastClicked": "<value>", "leads": 0, "createdAt": "1731724032379", "updatedAt": "1743803788355"}
-        "400":
-          application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
-        "401":
-          application/json: {"error": {"code": "unauthorized", "message": "The requested resource was not found."}}
-        "403":
-          application/json: {"error": {"code": "forbidden", "message": "The requested resource was not found."}}
-        "404":
-          application/json: {"error": {"code": "not_found", "message": "The requested resource was not found."}}
-        "409":
-          application/json: {"error": {"code": "conflict", "message": "The requested resource was not found."}}
-        "410":
-          application/json: {"error": {"code": "invite_expired", "message": "The requested resource was not found."}}
-        "422":
-          application/json: {"error": {"code": "unprocessable_entity", "message": "The requested resource was not found."}}
-        "429":
-          application/json: {"error": {"code": "rate_limit_exceeded", "message": "The requested resource was not found."}}
-        "500":
-          application/json: {"error": {"code": "internal_server_error", "message": "The requested resource was not found."}}
-  upsertLink:
-    speakeasy-default-upsert-link:
-      requestBody:
-        application/json: {"url": "https://pimms.io", "externalId": "123456", "tagIds": ["clux0rgak00011..."]}
-      responses:
-        "200":
-          application/json: {"id": "<id>", "domain": "neat-instruction.info", "key": "<key>", "url": "https://entire-rubric.com/", "trackConversion": false, "archived": false, "expiresAt": "1748439250288", "title": "<value>", "description": "father um daily", "image": "https://picsum.photos/seed/r6xe3C2p/3986/3106", "video": "https://picsum.videos/seed/1dnlg/3945/872", "ios": "<value>", "android": "<id>", "tags": [{"id": "<id>", "name": "<value>", "color": "purple"}, {"id": "<id>", "name": "<value>", "color": "pink"}, {"id": "<id>", "name": "<value>", "color": "purple"}], "webhookIds": [], "comments": "incidentally heroine and cleaner sentimental fail happily yum per homeschool positively pfft pomelo etch as with descent", "shortLink": "https://obvious-label.biz/", "qrCode": "https://blue-barge.name/", "utm_source": "<value>", "utm_medium": "<value>", "utm_campaign": "<value>", "utm_term": "<value>", "utm_content": "<value>", "userId": "<id>", "workspaceId": "<id>", "clicks": 0, "lastClicked": "<value>", "leads": 0, "createdAt": "1731984128291", "updatedAt": "1743794899507"}
-        "400":
-          application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
-        "401":
-          application/json: {"error": {"code": "unauthorized", "message": "The requested resource was not found."}}
-        "403":
-          application/json: {"error": {"code": "forbidden", "message": "The requested resource was not found."}}
-        "404":
-          application/json: {"error": {"code": "not_found", "message": "The requested resource was not found."}}
-        "409":
-          application/json: {"error": {"code": "conflict", "message": "The requested resource was not found."}}
-        "410":
-          application/json: {"error": {"code": "invite_expired", "message": "The requested resource was not found."}}
-        "422":
-          application/json: {"error": {"code": "unprocessable_entity", "message": "The requested resource was not found."}}
-        "429":
-          application/json: {"error": {"code": "rate_limit_exceeded", "message": "The requested resource was not found."}}
-        "500":
-          application/json: {"error": {"code": "internal_server_error", "message": "The requested resource was not found."}}
-  retrieveAnalytics:
-    speakeasy-default-retrieve-analytics:
-      parameters:
-        query:
-          event: "clicks"
-          groupBy: "count"
-          timezone: "America/New_York"
-          city: "New York"
-          device: "Desktop"
-          browser: "Chrome"
-          os: "Windows"
-          referer: "google.com"
-          refererUrl: "https://pimms.io/blog"
-      responses:
-        "200":
-          application/json: [{"country": "GE", "region": "*", "city": "North Kailee", "clicks": 0, "leads": 0, "sales": 0, "saleAmount": 0}, {"country": "PH", "region": "*", "city": "Port Anabelfort", "clicks": 0, "leads": 0, "sales": 0, "saleAmount": 0}, {"country": "VN", "region": "*", "city": "East Anissafurt", "clicks": 0, "leads": 0, "sales": 0, "saleAmount": 0}]
-        "400":
-          application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
-        "401":
-          application/json: {"error": {"code": "unauthorized", "message": "The requested resource was not found."}}
-        "403":
-          application/json: {"error": {"code": "forbidden", "message": "The requested resource was not found."}}
-        "404":
-          application/json: {"error": {"code": "not_found", "message": "The requested resource was not found."}}
-        "409":
-          application/json: {"error": {"code": "conflict", "message": "The requested resource was not found."}}
-        "410":
-          application/json: {"error": {"code": "invite_expired", "message": "The requested resource was not found."}}
-        "422":
-          application/json: {"error": {"code": "unprocessable_entity", "message": "The requested resource was not found."}}
-        "429":
-          application/json: {"error": {"code": "rate_limit_exceeded", "message": "The requested resource was not found."}}
-        "500":
-          application/json: {"error": {"code": "internal_server_error", "message": "The requested resource was not found."}}
-  trackLead:
-    speakeasy-default-track-lead:
-      requestBody:
-        application/json: {"clickId": "<id>", "eventName": "Sign up", "externalId": "", "customerName": null, "customerEmail": null, "customerAvatar": null}
-      responses:
-        "200":
-          application/json: {"click": {"id": "<id>"}, "customer": {"name": "<value>", "email": "Diego86@hotmail.com", "avatar": "https://picsum.photos/seed/fWwyl/1479/748", "externalId": "<id>"}}
-        "400":
-          application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
-        "401":
-          application/json: {"error": {"code": "unauthorized", "message": "The requested resource was not found."}}
-        "403":
-          application/json: {"error": {"code": "forbidden", "message": "The requested resource was not found."}}
-        "404":
-          application/json: {"error": {"code": "not_found", "message": "The requested resource was not found."}}
-        "409":
-          application/json: {"error": {"code": "conflict", "message": "The requested resource was not found."}}
-        "410":
-          application/json: {"error": {"code": "invite_expired", "message": "The requested resource was not found."}}
-        "422":
-          application/json: {"error": {"code": "unprocessable_entity", "message": "The requested resource was not found."}}
-        "429":
-          application/json: {"error": {"code": "rate_limit_exceeded", "message": "The requested resource was not found."}}
-        "500":
-          application/json: {"error": {"code": "internal_server_error", "message": "The requested resource was not found."}}
-  trackSale:
-    speakeasy-default-track-sale:
-      requestBody:
-        application/json: {"externalId": "", "amount": 996500, "paymentProcessor": "paddle", "eventName": "Purchase", "invoiceId": null, "currency": "usd"}
-      responses:
-        "200":
-          application/json: {"eventName": "<value>", "customer": {"id": "<id>", "name": "<value>", "email": "Muhammad0@hotmail.com", "avatar": "https://loremflickr.com/2579/465?lock=3083028689214487", "externalId": "<id>"}, "sale": {"amount": 8968.61, "currency": "Saudi Riyal", "paymentProcessor": "<value>", "invoiceId": "<id>", "metadata": {"key": "<value>", "key1": "<value>"}}}
-        "400":
-          application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
-        "401":
-          application/json: {"error": {"code": "unauthorized", "message": "The requested resource was not found."}}
-        "403":
-          application/json: {"error": {"code": "forbidden", "message": "The requested resource was not found."}}
-        "404":
-          application/json: {"error": {"code": "not_found", "message": "The requested resource was not found."}}
-        "409":
-          application/json: {"error": {"code": "conflict", "message": "The requested resource was not found."}}
-        "410":
-          application/json: {"error": {"code": "invite_expired", "message": "The requested resource was not found."}}
-        "422":
-          application/json: {"error": {"code": "unprocessable_entity", "message": "The requested resource was not found."}}
-        "429":
-          application/json: {"error": {"code": "rate_limit_exceeded", "message": "The requested resource was not found."}}
-        "500":
-          application/json: {"error": {"code": "internal_server_error", "message": "The requested resource was not found."}}
-  createReferralsEmbedToken:
-    speakeasy-default-create-referrals-embed-token:
-      requestBody:
-        application/json: {"programId": "<id>", "partner": {"name": "<value>", "email": "Florencio98@hotmail.com", "linkProps": {"externalId": "123456", "tagIds": ["clux0rgak00011..."]}}}
-      responses:
-        "201":
-          application/json: {"publicToken": "<value>", "expires": "<value>"}
-        "400":
-          application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
-        "401":
-          application/json: {"error": {"code": "unauthorized", "message": "The requested resource was not found."}}
-        "403":
-          application/json: {"error": {"code": "forbidden", "message": "The requested resource was not found."}}
-        "404":
-          application/json: {"error": {"code": "not_found", "message": "The requested resource was not found."}}
-        "409":
-          application/json: {"error": {"code": "conflict", "message": "The requested resource was not found."}}
-        "410":
-          application/json: {"error": {"code": "invite_expired", "message": "The requested resource was not found."}}
-        "422":
-          application/json: {"error": {"code": "unprocessable_entity", "message": "The requested resource was not found."}}
-        "429":
-          application/json: {"error": {"code": "rate_limit_exceeded", "message": "The requested resource was not found."}}
-        "500":
-          application/json: {"error": {"code": "internal_server_error", "message": "The requested resource was not found."}}
-  getQRCode:
-    speakeasy-default-get-QR-code:
-      parameters:
-        query:
-          url: "https://normal-making.name"
-          size: 600
-          level: "L"
-          fgColor: "#000000"
-          bgColor: "#FFFFFF"
-          hideLogo: "false"
-          margin: 2
-          includeMargin: "true"
-      responses:
-        "200":
-          image/png: "<value>"
-        "400":
-          application/json: {"error": {"code": "bad_request", "message": "The requested resource was not found."}}
-        "401":
-          application/json: {"error": {"code": "unauthorized", "message": "The requested resource was not found."}}
-        "403":
-          application/json: {"error": {"code": "forbidden", "message": "The requested resource was not found."}}
-        "404":
-          application/json: {"error": {"code": "not_found", "message": "The requested resource was not found."}}
-        "409":
-          application/json: {"error": {"code": "conflict", "message": "The requested resource was not found."}}
-        "410":
-          application/json: {"error": {"code": "invite_expired", "message": "The requested resource was not found."}}
-        "422":
-          application/json: {"error": {"code": "unprocessable_entity", "message": "The requested resource was not found."}}
-        "429":
-          application/json: {"error": {"code": "rate_limit_exceeded", "message": "The requested resource was not found."}}
-        "500":
-          application/json: {"error": {"code": "internal_server_error", "message": "The requested resource was not found."}}
-examplesVersion: 1.0.1
-generatedTests: {}
