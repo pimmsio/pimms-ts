@@ -1,5 +1,4 @@
 # Links
-(*links*)
 
 ## Overview
 
@@ -14,6 +13,7 @@ Create a new link for the authenticated workspace.
 
 ### Example Usage
 
+<!-- UsageSnippet language="typescript" operationID="createLink" method="post" path="/links" -->
 ```typescript
 import { Pimms } from "pimms";
 
@@ -30,7 +30,6 @@ async function run() {
     ],
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -59,15 +58,12 @@ async function run() {
       "clux0rgak00011...",
     ],
   });
-
-  if (!res.ok) {
-    throw res.error;
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("linksCreate failed:", res.error);
   }
-
-  const { value: result } = res;
-
-  // Handle the result
-  console.log(result);
 }
 
 run();
@@ -107,6 +103,7 @@ Upsert a link for the authenticated workspace by its URL. If a link with the sam
 
 ### Example Usage
 
+<!-- UsageSnippet language="typescript" operationID="upsertLink" method="put" path="/links/upsert" -->
 ```typescript
 import { Pimms } from "pimms";
 
@@ -123,7 +120,6 @@ async function run() {
     ],
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -152,15 +148,12 @@ async function run() {
       "clux0rgak00011...",
     ],
   });
-
-  if (!res.ok) {
-    throw res.error;
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("linksUpsert failed:", res.error);
   }
-
-  const { value: result } = res;
-
-  // Handle the result
-  console.log(result);
 }
 
 run();
