@@ -1,5 +1,4 @@
 # QRCodes
-(*qrCodes*)
 
 ## Overview
 
@@ -13,6 +12,7 @@ Retrieve a QR code for a link.
 
 ### Example Usage
 
+<!-- UsageSnippet language="typescript" operationID="getQRCode" method="get" path="/qr" -->
 ```typescript
 import { Pimms } from "pimms";
 
@@ -22,10 +22,9 @@ const pimms = new Pimms({
 
 async function run() {
   const result = await pimms.qrCodes.get({
-    url: "https://normal-making.name",
+    url: "https://needy-newsstand.biz/",
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -48,17 +47,14 @@ const pimms = new PimmsCore({
 
 async function run() {
   const res = await qrCodesGet(pimms, {
-    url: "https://normal-making.name",
+    url: "https://needy-newsstand.biz/",
   });
-
-  if (!res.ok) {
-    throw res.error;
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("qrCodesGet failed:", res.error);
   }
-
-  const { value: result } = res;
-
-  // Handle the result
-  console.log(result);
 }
 
 run();
