@@ -11,10 +11,9 @@ import {
   createRegisterResource,
   createRegisterResourceTemplate,
 } from "./resources.js";
-import { MCPScope, mcpScopes } from "./scopes.js";
+import { MCPScope } from "./scopes.js";
 import { createRegisterTool } from "./tools.js";
 import { tool$analyticsRetrieve } from "./tools/analyticsRetrieve.js";
-import { tool$embedTokensReferrals } from "./tools/embedTokensReferrals.js";
 import { tool$linksCreate } from "./tools/linksCreate.js";
 import { tool$linksUpsert } from "./tools/linksUpsert.js";
 import { tool$qrCodesGet } from "./tools/qrCodesGet.js";
@@ -31,7 +30,7 @@ export function createMCPServer(deps: {
 }) {
   const server = new McpServer({
     name: "Pimms",
-    version: "0.4.0",
+    version: "0.5.0",
   });
 
   const client = new PimmsCore({
@@ -40,7 +39,7 @@ export function createMCPServer(deps: {
     serverIdx: deps.serverIdx,
   });
 
-  const scopes = new Set(deps.scopes ?? mcpScopes);
+  const scopes = new Set(deps.scopes);
 
   const allowedTools = deps.allowedTools && new Set(deps.allowedTools);
   const tool = createRegisterTool(
@@ -66,7 +65,6 @@ export function createMCPServer(deps: {
   tool(tool$analyticsRetrieve);
   tool(tool$trackLead);
   tool(tool$trackSale);
-  tool(tool$embedTokensReferrals);
   tool(tool$qrCodesGet);
 
   return server;
