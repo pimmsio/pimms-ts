@@ -20,7 +20,7 @@ Track a lead for a short link.`,
     const [result, apiCall] = await trackLead(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

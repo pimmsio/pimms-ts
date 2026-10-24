@@ -15,7 +15,6 @@ async function run() {
     ],
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -39,7 +38,6 @@ async function run() {
     ],
   });
 
-  // Handle the result
   console.log(result);
 }
 
