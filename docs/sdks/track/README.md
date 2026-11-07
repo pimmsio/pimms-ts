@@ -1,5 +1,4 @@
 # Track
-(*track*)
 
 ## Overview
 
@@ -14,6 +13,7 @@ Track a lead for a short link.
 
 ### Example Usage
 
+<!-- UsageSnippet language="typescript" operationID="trackLead" method="post" path="/track/lead" -->
 ```typescript
 import { Pimms } from "pimms";
 
@@ -27,7 +27,6 @@ async function run() {
     eventName: "Sign up",
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -53,15 +52,12 @@ async function run() {
     clickId: "<id>",
     eventName: "Sign up",
   });
-
-  if (!res.ok) {
-    throw res.error;
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("trackLead failed:", res.error);
   }
-
-  const { value: result } = res;
-
-  // Handle the result
-  console.log(result);
 }
 
 run();
@@ -101,6 +97,7 @@ Track a sale for a short link.
 
 ### Example Usage
 
+<!-- UsageSnippet language="typescript" operationID="trackSale" method="post" path="/track/sale" -->
 ```typescript
 import { Pimms } from "pimms";
 
@@ -110,11 +107,10 @@ const pimms = new Pimms({
 
 async function run() {
   const result = await pimms.track.sale({
-    amount: 996500,
-    paymentProcessor: "paddle",
+    amount: 594903,
+    paymentProcessor: "<value>",
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -137,18 +133,15 @@ const pimms = new PimmsCore({
 
 async function run() {
   const res = await trackSale(pimms, {
-    amount: 996500,
-    paymentProcessor: "paddle",
+    amount: 594903,
+    paymentProcessor: "<value>",
   });
-
-  if (!res.ok) {
-    throw res.error;
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("trackSale failed:", res.error);
   }
-
-  const { value: result } = res;
-
-  // Handle the result
-  console.log(result);
 }
 
 run();

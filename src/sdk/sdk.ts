@@ -4,7 +4,6 @@
 
 import { ClientSDK } from "../lib/sdks.js";
 import { Analytics } from "./analytics.js";
-import { EmbedTokens } from "./embedtokens.js";
 import { Links } from "./links.js";
 import { QRCodes } from "./qrcodes.js";
 import { Track } from "./track.js";
@@ -23,11 +22,6 @@ export class Pimms extends ClientSDK {
   private _track?: Track;
   get track(): Track {
     return (this._track ??= new Track(this._options));
-  }
-
-  private _embedTokens?: EmbedTokens;
-  get embedTokens(): EmbedTokens {
-    return (this._embedTokens ??= new EmbedTokens(this._options));
   }
 
   private _qrCodes?: QRCodes;
