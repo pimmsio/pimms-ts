@@ -21,7 +21,7 @@ Retrieve analytics for a link, a domain, or the authenticated workspace. The res
     const [result, apiCall] = await analyticsRetrieve(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {
