@@ -20,7 +20,7 @@ Retrieve a QR code for a link.`,
     const [result, apiCall] = await qrCodesGet(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

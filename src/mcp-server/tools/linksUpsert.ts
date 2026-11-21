@@ -20,7 +20,7 @@ Upsert a link for the authenticated workspace by its URL. If a link with the sam
     const [result, apiCall] = await linksUpsert(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {
