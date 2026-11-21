@@ -20,7 +20,7 @@ Create a new link for the authenticated workspace.`,
     const [result, apiCall] = await linksCreate(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {
