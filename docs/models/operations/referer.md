@@ -1,6 +1,6 @@
-# CreateReferralsEmbedTokenTagNames
+# Referer
 
-The unique name of the tags assigned to the short link (case insensitive).
+The referers to retrieve analytics for. Can be multiple referers as comma-separated list.
 
 
 ## Supported Types
@@ -15,7 +15,8 @@ const value: string = "<value>";
 
 ```typescript
 const value: string[] = [
-  "<value>",
+  "<value 1>",
+  "<value 2>",
 ];
 ```
 
