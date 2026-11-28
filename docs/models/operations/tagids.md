@@ -8,7 +8,7 @@ List of existing tag IDs to categorize and filter links by campaigns, audiences,
 ### `string`
 
 ```typescript
-const value: string = "[\"clux0rgak00011...\"]";
+const value: string = "<value>";
 ```
 
 ### `string[]`
